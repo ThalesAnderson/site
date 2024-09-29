@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="shortcut icon" href="/img/fotinha.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+
+    <title>Registro - Vision Tech</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li class="menu_li"><a href="index.html" class="menu_link">Home</a></li>
+        <li class="menu_li"><a href="servicos.html" class="menu_link">Serviços</a></li>
+        <li class="menu_li"><a href="login.html" class="menu_link">Cursos</a></li>
+        </ul>
+
+    <div class="registro-page">
+
+        <img id="logo" src="/img/logo-vision.jpg">
+        <div id="quadrado_branco"></div>
+        <div id="quadrado_preto">
+            <div class="form">
+                <form id="registro-form">
+                    <input type="text" placeholder="Nome" id="nome" />
+                    <input type="text" placeholder="Email" id="email" />
+                    <input type="password" placeholder="Senha" id="senha" />
+                    <input type="date" placeholder="Data de Nascimento" id="data-nascimento" />
+                    <button type="button" onclick="registrar()">Registrar</button>
+                    <p class="message">Já registrado? Faça <a href="login.html">login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Função de registrar usuários
+        function registrar() {
+            //Pegando os valores inseridos nos inputs
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var dataNascimento = document.getElementById("data-nascimento").value;
+
+            // Verificar se todos os campos estão preenchidos
+            //Obs. [.trim] remove os espaçamentos em brancos, tabulações e quebras de linha --- "  conteudo   "
+            if (nome.trim() === "" || email.trim() === "" || senha.trim() === "" || dataNascimento.trim() === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+            // Criação de uma VAR que seria um array com a lista de 'users'
+            //Se não houver nenhum valor na chave, será inicalizada como um array vazio
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            //Criação de uma váriavel (callback) que procura na lista de users se há alguém com o mesmo endereço de email.
+            var usuarioExistente = users.find(function (user) {
+                //Comparação ->
+                return user.email === email;
+            });
+
+            //Se a VAR 'usuarioExistente' (que comparar o email dos users) for true...
+            if (usuarioExistente) {
+                //Retorna a mensagem:
+                alert("Este email já está registrado. Por favor, utilize outro.");
+                return;
+            }
+
+            //Cria um array
+            // Adicionando novo usuário
+            var novoUsuario = {
+                nome: nome,
+                email: email,
+                senha: senha,
+                dataNascimento: dataNascimento
+            };
+            //adicionamos o novo usuário ao array 'users' usando o método push.
+            users.push(novoUsuario);
+
+            //Atualizamos a lista local com novos users
+            //JSON.stringify = converte o array em uma string JSON pois o armazenar dados só pode ser com strings
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Registro bem-sucedido! Faça login para acessar sua conta.");
+            // Redirecionar para index.html após o registro
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

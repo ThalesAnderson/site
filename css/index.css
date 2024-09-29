@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/*----INICIO HEADER DO SITE*/
+
+/* Definindo a fonte do site */
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*img de fundo do header. Logo grande da Vision Tech*/
+.apresentacao {
+    background: url(/img/logo-vision.jpg) no-repeat 8% 40%;
+    background-size: 50%;
+}
+
+/* Propoção da img da logo "olho da Vision" no canto esquerdo em cima */
+.logo img {
+    width: 60px;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo img:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* Posiciona UL na direita do site */
+.menu {
+    float: right;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+/* Posiciona as Li uma ao lado da outra */
+.menu_li {
+    display: inline-block;
+    margin-left: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu_li:hover {
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+/* Tira a decoração do link */ 
+.menu_li .menu_link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Botão Sign In */
+.btn_signIn {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    padding: 10px 30px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 4px;
+    transition: background-color 1.0s, color 0.5s ease-in-out;
+}
+
+.btn_signIn:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+/* Botão Sign Up */
+.btn_signUp {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background-color: black;
+    transition: background-color 1.0s, color 0.5s ease-in-out;
+}
+
+.btn_signUp:hover {
+    background-color: red;
+    color: black;
+}
+
+/* -----------Parte da Apresentação Box---------- */
+/* Clear & box */
+/* Limpa */
+.clear {
+    clear: both;
+}
+
+/* Linha entre a logo da Vision e o texto do cabeçalho */
+div#linha_vertical{
+    height: 400px;
+    border-right: 3px solid black;
+    position: absolute;
+    top: 270px;
+    left: 1140px;
+}
+
+.apresentacao_conteudo {
+    display: inline-block;
+    top: 200px;
+    left: 1250px;
+    margin-bottom: 400px;
+    position: relative;
+}
+
+.tit-apresentacao {
+    color: black;
+    font-size: 34px;
+    line-height: 50px;
+}
+
+.descricao-apresentacao {
+    font-size: 20px;
+    line-height: 24px;
+    color: black;
+    margin: 30px 0 30px 0;
+    font-weight: 500;
+}
+
+.btn_comecar {
+    text-decoration: none;
+    margin-top: 20px;
+    background: black;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 1.0s, color 0.5s;
+    /* Adicionando uma transição suave para a cor de fundo e a cor do texto */
+}
+
+.btn_comecar:hover {
+    background-color: rgb(238, 238, 238);
+    color: black;
+}
+
+/*---------------------------SOBRE----------------------------------*/
+
+
+.box_ilustracao img#background{
+    width: 99.9%;
+    height: 188%;
+    top: 1700px;
+    left: 1px;
+    opacity: 40%;
+    position: absolute;
+    z-index: -1;
+}
+
+div#imagem img {
+    width: 650px;
+    top: 1966px;
+    left: 300px;
+    position: absolute;
+}
+
+div#about {
+    margin-top: 0px;
+}
+
+/* Ajustando o estilo da caixa de texto */
+.about_box {
+    float: right;
+    height: 650px;
+    width: 30%;
+    margin-top: 280px;
+    margin-right: 90px;
+    margin-bottom: -79px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(-45deg, rgb(230, 230, 230), white);
+}
+
+.about_box h1 {
+    font-family: 'Poppins' sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.about_box ul {
+    margin-left: -40px;
+}
+
+.about_box li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.about_box span {
+    font-size: 26px;
+    /* Reduzindo o tamanho da fonte para 32px */
+    line-height: 36px;
+    /* Reduzindo a altura da linha para 36px */
+    font-weight: 700;
+    margin-top: 20px;
+    /* Aumentando a margem superior para 20px */
+}
+
+.verificado {
+    width: 27px;
+    height: 25px;
+    margin: 0px;
+}

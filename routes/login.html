@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" href="/img/fotinha.ico">
+    
+    <title>Login - Vision Tech</title>
+</head>
+
+<body>
+<div class="login-page">
+  <div class="form">
+    <form id="login-form">
+      <input type="text" placeholder="Email" id="email"/>
+      <input type="password" placeholder="Senha" id="senha"/>
+      <button type="button" onclick="login()">Faça Login</button>
+      <p class="message">Não registrado? <a href="registro.html">Crie uma conta</a></p>
+    </form>
+    <button type="button" onclick="acessoSemLogin()">Acesse sem fazer login</button>
+  </div>
+</div>
+
+<script>
+    function login() {
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        // Verificar se os campos de email e senha estão preenchidos
+            
+        if (email.trim() === "" || senha.trim() === "") {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        // Simulando autenticação 
+        //Obtém/Armazena os dados armazenados no localStorage (API LOCAL MAQUINA WEB) sob a chave "users".
+                // Converte os dados JSON recuperados em um objeto JavaScript.
+//|| []: Se não houver dados recuperados (por exemplo, se ainda não houver usuários armazenados), define users como um array vazio.
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+        //Procurando (find) se a condição for verdadeira  = atribuindo pra VAR autheticated
+        var authenticatedUser = users.find(function(user) {
+            //Condição true = armazenamento de USER na localstorage
+            return user.email === email && user.senha === senha;
+        });
+
+        //Autenticação se os campos corresponderem
+        if (authenticatedUser) {
+            alert("Login bem-sucedido!");
+            // Redirecionar para index.html após o login
+            window.location.href = "/cursos.html";
+        } else {
+            alert("Credenciais inválidas. Por favor, tente novamente.");
+        }
+    }
+
+    function acessoSemLogin() {
+        // Implemente o comportamento desejado para acesso sem fazer login
+        alert("Acesso sem fazer login.");
+        // Redirecionar para index.html ao acessar sem fazer login
+        window.location.href = "/cursos.html";
+    }
+</script>
+</body>
+</html>

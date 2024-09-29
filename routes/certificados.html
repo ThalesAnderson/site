@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/certificados.css">
+    <link rel="shortcut icon" href="/img/fotinha.ico">
+    
+    <title>Certificados - Vision Tech</title>
+</head>
+
+<body>
+
+  <ul class="menu">
+    <li class="menu_li"><a href="index.html" class="menu_link">Home</a></li>
+    <li class="menu_li"><a href="servicos.html" class="menu_link">Serviços</a></li>
+    <li class="menu_li"><a href="login.html" class="menu_link">Cursos</a></li>
+  </ul>
+
+<div class="login-page">
+  <div class="form">
+    <form id="login-form">
+      <input type="text" placeholder="Insira o código de autenticação..." id="codigo">
+      <button type="button" onclick="validar()">Procurar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+
+function validar() {
+        var codigo = document.getElementById("codigo").value;
+
+if (codigo.trim() === "VT-JD8X") {
+            alert("Este certificado é válido! Pressione ok para acessar o documento.");
+            window.location.href = "/renata_word.html";
+}
+if (codigo.trim() === "VT-TR6N") {
+            alert("Este certificado é válido! Pressione ok para acessar o documento.");
+            window.location.href = "/renata_excel.html";
+        }
+    }
+</script>
+
+</body>
+</html>

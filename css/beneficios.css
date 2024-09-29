@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.tit-beneficios{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.linha{
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 14%;
+    margin-bottom: 100px;
+}
+
+.icones {
+    display: flex;
+    justify-content: left;
+    gap: 20px; /* Adiciona espaçamento entre os ícones */
+    margin-left: 200px;
+}
+
+.box-imagem img {
+    margin-top: 10px;
+}
+
+.conteudo-box-icones{
+    transition: transform 0.5s ease-in-out; 
+    /*margin-bottom: 120px;*/
+}
+
+/* Teste de cores zebras do site */
+div#cor-beneficio {
+    background-color: black; /* Teste de cores zebras do site */
+    height: 735px;
+    margin-right: -8px;
+    margin-bottom: 0px;
+    margin-left: -8px;
+}
+
+.conteudo-box-icones:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1); 
+}
+
+/* Teste de cores zebras do site */
+.conteudo-box-icones h6{ 
+    font-size: 22px;
+    font-weight: 600;
+    color: white;/* Teste de cores zebras do site */
+    margin: 20px 0;
+}
+
+/* Teste de cores zebras do site */
+.conteudo-box-icones p{
+    font-size: 16px;
+    line-height: 22px;
+    color: white;/* Teste de cores zebras do site */
+}

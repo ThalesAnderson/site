@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+/* Estilo para o link "Não registrado? Crie sua conta" */
+.message a {
+    color: #007bff; /* Cor azul para o link */
+    text-decoration: none; /* Remover sublinhado padrão */
+    font-weight: bold; /* Deixar o texto em negrito */
+    transition: color 0.3s; /* Adicionar transição suave para a cor */
+    margin-bottom: 10px; /* Adicionar espaçamento abaixo do link */
+  }
+  
+  .message a:hover {
+    color: #0056b3; /* Mudar a cor ao passar o mouse */
+  }
+  

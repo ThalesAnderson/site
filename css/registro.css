@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+.menu {
+  position:relative;
+  margin-top: -120px;
+  margin-right: 80px;
+}
+
+/* Posiciona as Li uma ao lado da outra */
+.menu_li {
+  display: inline-block;
+  margin-left: 35px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu_li:hover {
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+/* Tira a decoração do link */ 
+.menu_li .menu_link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Estilos para a página de registro */
+.registro-page {
+  display: flex;
+  height: 80dvh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.registro-page img#logo{
+  width: 15%;
+  position: absolute;
+  top: 190px;
+  z-index: 1;
+}
+  
+.form {
+  height: 500px;
+  width: 400px;
+}
+
+div#quadrado_preto {
+  border-radius: 20px 20px 20px 20px;
+  padding: 140px 60px 50px 40px;
+  background-color: #141414;
+  box-shadow: 1px 1px 20px black;
+}
+
+div#quadrado_branco{
+  height: 200px;
+  width: 498px;
+  border-radius: 20px 20px 15px 100px;
+  background-color: white;
+  box-shadow: 1px 1px 20px black;
+  position: absolute;
+  top: 150px;
+}
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  button {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0px;
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+  }
+  
+  button {
+    width: 106%;
+    font-size: 20px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  button:hover{
+    background-color: #278fff;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    margin-top: 130px;
+    color: white;
+  }
+  
+  /* Estilo para o link "Já registrado? Faça login" */
+.message a {
+  color: #007bff; /* Cor azul para o link */
+  text-decoration: none; /* Remover sublinhado padrão */
+  font-weight: bold; /* Deixar o texto em negrito */
+  transition: color 0.3s; /* Adicionar transição suave para a cor */
+}
+
+.message a:hover {
+  color: #004186; /* Mudar a cor ao passar o mouse */
+}

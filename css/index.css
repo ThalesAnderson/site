@@ -3,18 +3,29 @@
 /*----INICIO HEADER DO SITE*/
 
 /* Definindo a fonte do site */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 html,
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+main {
+    max-width: 100%;
+    margin: 5px 5px 5px 5px;
+}
+
 /*img de fundo do header. Logo grande da Vision Tech*/
 .apresentacao {
-    background: url(/img/logo-vision.jpg) no-repeat 8% 40%;
+    background: url(/img/logo-vision.jpg) no-repeat 8% 70%;
     background-size: 50%;
 }
 
-/* Propoção da img da logo "olho da Vision" no canto esquerdo em cima */
+/* Propoção da img da logo "Falcão da Vision" no canto esquerdo em cima */
 .logo img {
     width: 60px;
     margin-top: 5px;
@@ -34,6 +45,8 @@ body {
     margin-right: 20px;
     margin-top: 40px;
 }
+
+
 
 /* Posiciona as Li uma ao lado da outra */
 .menu_li {
@@ -108,7 +121,7 @@ div#linha_vertical{
     display: inline-block;
     top: 200px;
     left: 1250px;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     position: relative;
 }
 
@@ -148,50 +161,42 @@ div#linha_vertical{
 /*---------------------------SOBRE----------------------------------*/
 
 
-.box_ilustracao img#background{
-    width: 99.9%;
-    height: 188%;
-    top: 1700px;
-    left: 1px;
+.box_ilustracao .background {
     opacity: 40%;
-    position: absolute;
+    width: 1895px;
+    height: 1140px;
     z-index: -1;
+    margin: 0px;
 }
 
 div#imagem img {
     width: 650px;
-    top: 1966px;
+    top: 1868px;
     left: 300px;
     position: absolute;
+    
 }
 
-div#about {
-    margin-top: 0px;
-}
 
 /* Ajustando o estilo da caixa de texto */
 .about_box {
     float: right;
     height: 650px;
     width: 30%;
-    margin-top: 280px;
-    margin-right: 90px;
-    margin-bottom: -79px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 10px;
     background-image: linear-gradient(-45deg, rgb(230, 230, 230), white);
+    top: 1966px;
+    left: 1100px;
+    position: absolute;
 }
 
 .about_box h1 {
     font-family: 'Poppins' sans-serif;
     font-size: 40px;
     margin-top: 0px;
-    margin-bottom: 50px;
-}
-
-.about_box ul {
-    margin-left: -40px;
+    margin-bottom: 60px;
 }
 
 .about_box li {
@@ -205,7 +210,7 @@ div#about {
     line-height: 36px;
     /* Reduzindo a altura da linha para 36px */
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 25px;
     /* Aumentando a margem superior para 20px */
 }
 
@@ -213,4 +218,67 @@ div#about {
     width: 27px;
     height: 25px;
     margin: 0px;
+}
+
+/* Utilizando Media Querys no site */
+
+@media (max-width: 700px) {
+    main {
+        width: 700px;
+    }
+    
+    .apresentacao {
+        background: url(/img/logo-vision.jpg) no-repeat;
+        background-size: 50%;
+        background-position-x: 20%;
+        background-position-y: 30%;
+    }
+    
+    .apresentacao_conteudo {
+        top: 400px;
+        left: 50px;
+        margin-bottom: 200px;
+        position: relative;
+    }
+
+    .tit-apresentacao {
+        text-align: center;
+        color: black;
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .descricao-apresentacao {
+        font-size: 20px;
+        text-align: center;
+        line-height: 24px;
+        color: black;
+    }
+
+    div#linha_vertical{
+        height: 0px;
+    }
+    
+    .btn_comecar {
+        font-size: 20px;
+       text-align: center;
+       margin-top: 20px;
+       margin-bottom: 100px;
+       margin-left: 215px;
+    }
+    
+    .menu {
+        text-align: end;
+        margin-top: 0px;
+    }
+
+    .menu_li {
+        padding: 15px 35px 0px 0px;
+        margin-left: 22px;
+        margin-right: 0px;
+    }
+
+    .tit-beneficios {
+        margin-top: 20px;
+    }
 }

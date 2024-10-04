@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-top: 200px;
 }
 
 .linha{
@@ -15,8 +16,9 @@
 
 .icones {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 20px; /* Adiciona espaçamento entre os ícones */
+    margin-top: 160px;
     margin-left: 200px;
 }
 
@@ -33,9 +35,6 @@
 div#cor-beneficio {
     background-color: black; /* Teste de cores zebras do site */
     height: 735px;
-    margin-right: -8px;
-    margin-bottom: 0px;
-    margin-left: -8px;
 }
 
 .conteudo-box-icones:hover {
@@ -44,9 +43,10 @@ div#cor-beneficio {
 }
 
 /* Teste de cores zebras do site */
-.conteudo-box-icones h6{ 
+.conteudo-box-icones h6{
+    display: flex;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: bold;
     color: white;/* Teste de cores zebras do site */
     margin: 20px 0;
 }

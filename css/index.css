@@ -222,6 +222,7 @@ div#imagem img {
 
 /* Utilizando Media Querys no site */
 
+/* Tablet */
 @media (max-width: 700px) {
     main {
         width: 700px;
@@ -256,15 +257,15 @@ div#imagem img {
     }
 
     div#linha_vertical{
-        height: 0px;
+        display: none;
     }
     
     .btn_comecar {
         font-size: 20px;
-       text-align: center;
-       margin-top: 20px;
-       margin-bottom: 100px;
-       margin-left: 215px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        margin-left: 215px;
     }
     
     .menu {
@@ -281,4 +282,6 @@ div#imagem img {
     .tit-beneficios {
         margin-top: 20px;
     }
+
+    
 }

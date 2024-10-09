@@ -18,8 +18,9 @@
     display: flex;
     justify-content: center;
     gap: 20px; /* Adiciona espaçamento entre os ícones */
-    margin-top: 160px;
-    margin-left: 200px;
+    margin-top: 15%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .box-imagem img {
@@ -35,6 +36,8 @@
 div#cor-beneficio {
     background-color: black; /* Teste de cores zebras do site */
     height: 735px;
+    margin-right: -6px;
+    margin-left: -9px;
 }
 
 .conteudo-box-icones:hover {

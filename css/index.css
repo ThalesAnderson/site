@@ -5,7 +5,7 @@
 /* Definindo a fonte do site */
 
 * {
-    margin: 0px;
+    margin: 2px;
     padding: 0px;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    max-width: 100%;
+    max-width: 99%;
     margin: 5px 5px 5px 5px;
 }
 
@@ -158,8 +158,8 @@ div#linha_vertical{
     color: black;
 }
 
-/*---------------------------SOBRE----------------------------------*/
 
+/*---------------------------SOBRE----------------------------------*/
 
 .box_ilustracao .background {
     opacity: 40%;
@@ -220,65 +220,192 @@ div#imagem img {
     margin: 0px;
 }
 
+
 /* Utilizando Media Querys no site */
 
 @media (max-width: 700px) {
     main {
         width: 700px;
-    }
-    
-    .apresentacao {
-        background: url(/img/logo-vision.jpg) no-repeat;
-        background-size: 50%;
-        background-position-x: 20%;
-        background-position-y: 30%;
-    }
-    
-    .apresentacao_conteudo {
-        top: 400px;
-        left: 50px;
-        margin-bottom: 200px;
-        position: relative;
+        margin: 5px;
     }
 
+    /* Menu de PC desaparece */
+    .menu {
+        display: none;
+    }
+
+    /* Dropdown-content - Opções após clicar no menu */
+    .menu_mobile {
+        display: none;
+        list-style: none;
+        right: 100%;
+        background-color: white;
+        border: 1px solid black;
+        position: absolute;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    
+    /* Dropdown em si */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 0px;
+    }
+
+    /* O container que envolve todo o menu para movimentar */
+    .container_menu_mobile {
+        display: flex;
+        justify-content: right;
+        margin-top: 0px;
+        margin-right: 2%;
+    }
+
+    /* A imagem que serve como botão no menu */
+    .menu_button_mobile {
+        font-size: 3em;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu_li_mobile {
+        display: inline-block;
+        background-color: rgb(211, 211, 211);
+        margin-left: 22px;
+    }
+
+    .menu_li_mobile:hover {
+        font-weight: bold;
+    }
+
+    /* As opções dentro do menu */
+    .menu_link_mobile {
+        font-size: 28px;
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Fazer o menu aparecer ao clicar em cima */
+    .dropdown:hover .menu_mobile {
+        display: inline;
+        min-width: 580px;
+        top: 18%;
+        right: 150%;
+    }
+
+    .dropdown:hover .logo {
+        display: none;
+    }
+    
+    /* Logo da Vision Tech */
+    .apresentacao {
+        background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
+        background-size: 50%;
+    }
+    
+    /* Container dos textos 01 e 02 */
+    .apresentacao_conteudo {
+        display: block;
+        left:0px;
+        margin-top: 10%;
+        margin-right: 5%;
+        margin-bottom: 40%;
+        margin-left: 5%;
+    }
+
+    /* Texto 01 da Vision */
     .tit-apresentacao {
+        font-size: 25px;
         text-align: center;
         color: black;
-        font-size: 26px;
         line-height: 36px;
     }
 
+    /* Texto 02 da Vision */
     .descricao-apresentacao {
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
         line-height: 24px;
         color: black;
     }
 
-    div#linha_vertical{
-        height: 0px;
-    }
-    
-    .btn_comecar {
-        font-size: 20px;
-       text-align: center;
-       margin-top: 20px;
-       margin-bottom: 100px;
-       margin-left: 215px;
-    }
-    
-    .menu {
-        text-align: end;
-        margin-top: 0px;
+    .container_comecar {
+        text-align: center;
     }
 
-    .menu_li {
-        padding: 15px 35px 0px 0px;
-        margin-left: 22px;
-        margin-right: 0px;
+    /* Linha vertical que tem no desktop */
+    div#linha_vertical{
+        display: none;
+    }
+
+    .linha {
+        display: none;
+    }
+
+    .tit-beneficios h1 {
+        margin-top: 15%;
+        color: white;
+    }
+
+    .icones {
+        margin-top: 50%;
+    }
+    
+    .btn_saiba_mais {
+        font-size: 16px;
+        text-decoration: none;
+        background: black;
+        color: white;
+        padding: 5px 15px;
+        margin-left: 45%;
+        border-radius: 8px;
     }
 
     .tit-beneficios {
         margin-top: 20px;
     }
+
+    div#imagem #imagem {
+        width: 55%;
+        top: 210.5%;
+        left: 2%;
+    }
+
+    .about_box {
+        height: 53%;
+        width: 35%;
+        padding: 15px 10px 15px 15px;
+        top: 210%;
+        left: 56%;
+    }
+
+    .about_box li {
+        margin-bottom: 20px;
+    }
+
+    .about_box h1 {
+        font-size: 18px;
+        padding-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .about_box span {
+        font-size: 14px;
+        margin-top: 0px;
+        line-height: 25px;
+    }
+
+    .verificado {
+        width: 8%;
+        height: 8%;
+    }
+
+    .box_ilustracao {
+        margin: 0px;
+    }
+
+    .box_ilustracao .background {
+        width: 100%;
+        height: 100%;
+    }
+
 }

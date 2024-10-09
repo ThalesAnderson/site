@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/beneficios.css">
     <link rel="stylesheet" href="/css/rodape.css">
     <link rel="shortcut icon" href="/img/fotinha.ico">
-        <link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 </head>
 
@@ -27,7 +27,21 @@
 
             <!--PARTE HEADER MENU-->
 
+            <!-- Menu tablet/mobile -->
+            <div class="container_menu_mobile">
+                <div class="dropdown">
+                    <button class="menu_button_mobile">☰</button>
+                    <ul class="menu_mobile">
+                        <li class="menu_li_mobile"><a href="#" class="menu_link_mobile">Home</a></li>
+                        <li class="menu_li_mobile"><a href="servicos.html" class="menu_link_mobile">Serviços</a></li>
+                        <li class="menu_li_mobile"><a href="login.html" class="menu_link_mobile">Cursos</a></li>
+                        <li class="menu_li_mobile"><a href="sobre_nos.html" class="menu_link_mobile">Sobre nós</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <!--Lista desodernada com o menu-->
+
             <ul class="menu">
                 <li class="menu_li"><a href="#" class="menu_link">Home</a></li>
                 <li class="menu_li"><a href="servicos.html" class="menu_link">Serviços</a></li>
@@ -52,7 +66,9 @@
                     serviços!<br>
                     Orientação de profissionais capacitados<br>
                     para lhe auxiliar e ensinar da melhor maneira possível.</p>
-                <a href="../routes/registro.html" class="btn_comecar">Começar</a>
+                <div class="container_comecar">
+                    <a href="../routes/registro.html" class="btn_comecar">Começar</a>
+                </div>
             </div>
         </div>
 
@@ -143,7 +159,7 @@
                         </li>
                     </ul>
 
-                    <a href="../routes/servicos" class="btn_comecar">Saiba mais</a>
+                    <a href="../routes/servicos" class="btn_saiba_mais">Saiba mais</a>
                 </div>
 
                 <div class="clear">
@@ -180,7 +196,8 @@
                             <h3>Redes Sociais</h3>
 
                             <ul>
-                                <li><a href="https://www.instagram.com/avision_tech/">Instragram<i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/avision_tech/">Instragram<i
+                                            class="fab fa-instagram"></i></a></li>
                                 <li><a href="#">Linkedin<i class="fab fa-linkedin"></i></a></li>
                             </ul>
                         </div>
@@ -194,4 +211,5 @@
         </div>
     </main>
 </body>
+
 </html>

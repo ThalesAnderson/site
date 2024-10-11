@@ -4,11 +4,6 @@
 
 /* Definindo a fonte do site */
 
-* {
-    margin: 2px;
-    padding: 0px;
-}
-
 html,
 body {
     font-family: 'Poppins', sans-serif;
@@ -40,6 +35,10 @@ main {
 }
 
 /* Posiciona UL na direita do site */
+.container_menu_mobile {
+    display: none;
+}
+
 .menu {
     float: right;
     margin-right: 20px;
@@ -161,12 +160,10 @@ div#linha_vertical{
 
 /*---------------------------SOBRE----------------------------------*/
 
-.box_ilustracao .background {
+.background {
     opacity: 40%;
-    width: 1895px;
-    height: 1140px;
-    z-index: -1;
-    margin: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 div#imagem img {
@@ -224,10 +221,14 @@ div#imagem img {
 /* Utilizando Media Querys no site */
 
 /* Tablet */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+    body {
+        margin: 0px;
+    }
+
     main {
-        width: 700px;
-        margin: 5px;
+        width: 100%;
+        margin: 0px;
     }
 
     /* Menu de PC desaparece */
@@ -300,17 +301,16 @@ div#imagem img {
     /* Logo da Vision Tech */
     .apresentacao {
         background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
-        background-size: 50%;
+        background-size: 60%;
     }
     
     /* Container dos textos 01 e 02 */
     .apresentacao_conteudo {
-        display: block;
-        left:0px;
+        display: grid;
+        justify-content: center;
+        left: 0;
         margin-top: 10%;
-        margin-right: 5%;
         margin-bottom: 40%;
-        margin-left: 5%;
     }
 
     /* Texto 01 da Vision */
@@ -329,20 +329,19 @@ div#imagem img {
         color: black;
     }
 
-    .container_comecar {
-        text-align: center;
-    }
-
     div#linha_vertical {
         display: none;
+    }
+
+    .container_comecar {
+        text-align: center;
+        margin: 20px 0px 50px 0px;
     }
     
     .btn_comecar {
         font-size: 20px;
         text-align: center;
-        margin-top: 20px;
-        margin-bottom: 100px;
-        margin-left: 215px;
+        margin-top: 10px;
     }
     
     .menu {
@@ -359,11 +358,6 @@ div#imagem img {
         display: none;
     }
 
-    .tit-beneficios h1 {
-        margin-top: 15%;
-        color: white;
-    }
-
     .icones {
         margin-top: 50%;
     }
@@ -378,39 +372,53 @@ div#imagem img {
         border-radius: 8px;
     }
 
+    div#cor-beneficio {
+        width: 100%;
+    }
+
     .tit-beneficios {
         margin-top: 20px;
     }
 
-HEAD
+    .tit-beneficios {
+        display: flex;
+        justify-content: center;
+    }
+
     div#imagem #imagem {
         width: 55%;
-        top: 210.5%;
-        left: 2%;
+        top: 232.2%;
+        left: 3%;
     }
 
     .about_box {
         height: 53%;
-        width: 35%;
-        padding: 15px 10px 15px 15px;
-        top: 210%;
-        left: 56%;
+        width: 33%;
+        padding: 15px 10px 15px 10px;
+        top: 230%;
+        left: 58%;
     }
 
     .about_box li {
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
 
     .about_box h1 {
         font-size: 18px;
-        padding-top: 0px;
-        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 0px 10px;
+        margin-bottom: 35px;
     }
 
     .about_box span {
         font-size: 14px;
         margin-top: 0px;
-        line-height: 25px;
+        line-height: 20px;
+    }
+
+    .about_box_ul {
+        padding: 0px;
     }
 
     .verificado {
@@ -422,8 +430,5 @@ HEAD
         margin: 0px;
     }
 
-    .box_ilustracao .background {
-        width: 100%;
-        height: 100%;
-    }
+    
 }

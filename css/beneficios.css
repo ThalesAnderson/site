@@ -22,9 +22,9 @@
 .icones {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adiciona espaçamento entre os ícones */
+    gap: 60px;
     margin-top: 100px;
-    margin-right: 5%;
+    margin-right: 0px;
     margin-left: 5%;
 }
 
@@ -33,7 +33,8 @@
 }
 
 .conteudo-box-icones{
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out;
+    width: 20%;
 }
 
 /* Teste de cores zebras do site */
@@ -52,7 +53,8 @@ div#cor-beneficio {
     display: flex;
     font-size: 22px;
     font-weight: bold;
-    color: white;/* Teste de cores zebras do site */
+    display: inline;
+    color: white;
     margin: 20px 0;
 }
 
@@ -60,5 +62,6 @@ div#cor-beneficio {
 .conteudo-box-icones p{
     font-size: 16px;
     line-height: 22px;
-    color: white;/* Teste de cores zebras do site */
+    display: inline;
+    color: white;
 }

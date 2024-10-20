@@ -24,8 +24,8 @@ main {
 /* Propoção da img da logo "Falcão da Vision" no canto esquerdo em cima */
 .logo img {
     width: 60px;
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: -30px;
+    margin-left: 15px;
     position: absolute;
     transition: transform 0.5s ease-in-out;
 }
@@ -41,12 +41,14 @@ main {
 }
 
 .menu {
-    float: right;
+    display: flex;
     margin-right: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-left: 50px;
 }
-
-
 
 /* Posiciona as Li uma ao lado da outra */
 .menu_li {
@@ -61,7 +63,7 @@ main {
     transform: scale(1.2);
 }
 
-/* Tira a decoração do link */ 
+/* Tira a decoração do link */
 .menu_li .menu_link {
     text-decoration: none;
     color: black;
@@ -108,24 +110,19 @@ main {
     clear: both;
 }
 
-/* Linha entre a logo da Vision e o texto do cabeçalho */
-div#linha_vertical{
-    height: 400px;
-    border-right: 3px solid black;
-    position: absolute;
-    top: 270px;
-    left: 1140px;
-}
-
 .apresentacao_conteudo {
-    display: inline-block;
-    top: 200px;
-    left: 1250px;
-    margin-bottom: 200px;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: center;
+    margin-top: 200px;
+    margin-right: 200px;
+    margin-bottom: 10%;
 }
 
 .tit-apresentacao {
+    text-align: center;
     color: black;
     font-size: 34px;
     line-height: 50px;
@@ -133,6 +130,7 @@ div#linha_vertical{
 
 .descricao-apresentacao {
     font-size: 20px;
+    text-align: center;
     line-height: 24px;
     color: black;
     margin: 30px 0 30px 0;
@@ -233,8 +231,12 @@ div#linha_vertical{
     }
 
     main {
-        width: 100%;
         margin: 0px;
+    }
+
+    .logo img {
+        margin-top: 0px;
+        margin-left: 10px;
     }
 
     /* Menu de PC desaparece */
@@ -250,9 +252,9 @@ div#linha_vertical{
         background-color: white;
         border: 1px solid black;
         position: absolute;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
-    
+
     /* Dropdown em si */
     .dropdown {
         position: relative;
@@ -277,7 +279,7 @@ div#linha_vertical{
 
     .menu_li_mobile {
         display: inline-block;
-        background-color: rgb(211, 211, 211);
+        background-color: rgb(230, 230, 230);
         margin-left: 22px;
     }
 
@@ -296,27 +298,27 @@ div#linha_vertical{
     .dropdown:hover .menu_mobile {
         display: inline;
         min-width: 580px;
-        top: 18%;
-        right: 150%;
+        top: 90%;
+        right: 90%;
     }
 
     .dropdown:hover .logo {
         display: none;
     }
-    
+
     /* Logo da Vision Tech */
     .apresentacao {
         background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
         background-size: 60%;
     }
-    
+
     /* Container dos textos 01 e 02 */
     .apresentacao_conteudo {
         display: grid;
         justify-content: center;
-        left: 0;
-        margin-top: 10%;
-        margin-bottom: 40%;
+        margin-top: 50%;
+        margin-right: 0px;
+        margin-bottom: 0%;
     }
 
     /* Texto 01 da Vision */
@@ -343,27 +345,27 @@ div#linha_vertical{
         text-align: center;
         margin: 20px 0px 50px 0px;
     }
-    
+
     .btn_comecar {
         font-size: 16px;
         text-align: center;
         margin-top: 10px;
     }
-    
+
     .menu {
         text-align: end;
         margin-top: 0px;
     }
 
     /* Linha vertical que tem no desktop */
-    div#linha_vertical{
+    div#linha_vertical {
         display: none;
     }
 
     .linha {
         display: none;
     }
-    
+
     .btn_saiba_mais {
         font-size: 16px;
         text-decoration: none;
@@ -376,20 +378,18 @@ div#linha_vertical{
     }
 
     div#cor-beneficio {
-        width: 100%;
-    }
-
-    .tit-beneficios {
-        margin-top: 20px;
-    }
-
-    .tit-beneficios {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
-    .icones {
-        margin-left: 50px;
+    .tit-beneficios{
+        margin-top: 0;
+    }
+
+    .tit-beneficios h1 {
+        margin-top: 0px;
     }
 
     .separar {
@@ -443,6 +443,4 @@ div#linha_vertical{
     .box_ilustracao {
         margin: 0px;
     }
-
-    
 }

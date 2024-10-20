@@ -1,29 +1,34 @@
 @charset "UTF-8";
 
-.tit-beneficios{
+/* Teste de cores zebras do site */
+div#cor-beneficio {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Teste de cores zebras do site */
+    height: 770px;
+}
+
+.tit-beneficios{
     justify-content: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 0%;
 }
 
 .tit-beneficios h1 {
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 0%;
     color: white;
-}
-
-.linha{
-    border: 3px solid black;
-    border-radius: 5px;
-    width: 14%;
-    margin-bottom: 100px;
 }
 
 .icones {
     display: flex;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 60px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-right: 0px;
     margin-left: 5%;
 }
@@ -37,11 +42,7 @@
     width: 20%;
 }
 
-/* Teste de cores zebras do site */
-div#cor-beneficio {
-    background-color: black; /* Teste de cores zebras do site */
-    height: 770px;
-}
+
 
 .conteudo-box-icones:hover {
     transition: all 0.3s ease-in-out;

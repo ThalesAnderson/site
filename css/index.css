@@ -444,3 +444,80 @@ main {
         margin: 0px;
     }
 }
+
+@media (max-width: 320px) {
+    .logo img {
+        width: 30px;
+    }
+
+    .menu_button_mobile {
+        font-size: 2em;
+    }
+
+    .menu_mobile {
+        text-align: center;
+    }
+
+    .dropdown:hover .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-width: 180px;
+        height: 200px;
+        padding: 10px 15px 10px 0px;
+    }
+
+    .apresentacao {
+        background: url(/img/logo-vision.jpg) no-repeat 50% 20%;
+        background-size: 60%;
+        margin-top: 0%;
+    }
+
+    .apresentacao_conteudo {
+        display: grid;
+        justify-content: center;
+        margin-top: 80%;
+        margin-right: 0px;
+        margin-bottom: 0%;
+    }
+
+    .tit-apresentacao {
+        font-size: 15px;
+        text-align: center;
+        color: black;
+        line-height: 36px;
+    }
+
+    .descricao-apresentacao {
+        font-size: 15px;
+        text-align: center;
+        line-height: 24px;
+        color: black;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    div#cor-beneficio {
+        display: flex;
+        margin: 0px;
+    }
+
+    .icones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .tit-beneficios {
+        margin: 0px;
+    }
+
+    .tit-beneficios h1 {
+       margin-top: 0px;
+    }
+}

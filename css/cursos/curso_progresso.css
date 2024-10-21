@@ -1,0 +1,251 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+header nav a.mark-complete {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: white;
+    background-color: #4caf50; /* Green background */
+    padding: 10px 20px;
+    border-radius: 25px; /* Round shape */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a.mark-complete:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+header nav a.mark-complete input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    accent-color: white; /* Color of the checkbox */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+header nav a.mark-complete input[type="checkbox"]:checked {
+    transform: scale(1.2); /* Slightly enlarge when checked */
+}
+
+header nav a.mark-complete label {
+    color: white; /* Set text color to white */
+    font-weight: bold;
+    margin: 0;
+}
+
+header nav a.profile {
+    margin-left: auto;
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+header nav .openbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Adjusted progress container and bar */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px; /* Adjust as needed */
+}
+
+.progress-percentage {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px; /* Adjusted height */
+    background-color: #ddd;
+    border-radius: 6px; /* Adjusted radius */
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 6px; /* Adjusted radius */
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 8px 8px 32px;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+.sidebar ul li:hover {
+    color: #f1f1f1;
+    background-color: #575757; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Estilo para a lista de lições */
+#lessonList {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    font-family: Arial, sans-serif; /* Define a fonte para a lista */
+}
+
+/* Estilo para o cabeçalho do módulo */
+.module-header {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333; /* Cor do texto */
+    border-bottom: 2px solid #ffffff; /* Linha branca embaixo */
+    padding-bottom: 5px; /* Espaçamento abaixo do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo da linha */
+}
+
+/* Estilo para as informações do módulo */
+.module-info {
+    font-size: 1em;
+    color: #555; /* Cor do texto */
+    margin-bottom: 15px; /* Espaçamento abaixo do texto */
+}
+
+/* Estilo para os itens da lista de lições */
+.lesson-item {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #333; /* Cor do texto */
+    display: block; /* Faz o link ocupar a largura completa */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+.lesson-item:hover {
+    background-color: #363636; /* Cor de fundo ao passar o mouse */
+    color: #000; /* Cor do texto ao passar o mouse */
+}
+
+.lesson-item li {
+    margin: 0; /* Remove margem dos itens da lista */
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 10px;
+}
+
+.main-content .in-progress {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #888;
+    border-radius: 10px;
+}
+
+/* Style da Barra de progresso */

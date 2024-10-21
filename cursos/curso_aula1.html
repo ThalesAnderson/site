@@ -1,0 +1,136 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION TECH Course</title>
+    <link rel="stylesheet" href="../css/cursos/curso_progresso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra lateral que abre e fecha -->
+    <div id="mySidebar" class="sidebar">
+        <!-- Referencia a function 'closeNav' que fecha a barra lateral -->
+            <!-- Obs. 'javascript:void(0)' quando clicado, não será navegado por uma nova página, nem qlqr ação padrão de um link -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <!--Lista das lições definidas por 'data-lesson'-->
+        <ul id="lessonList">
+            <li class="module-header">Módulo 1</li>
+            <li class="module-info">❯ 04 aulas</li>
+            <!--data-lesson armazenam e servem para percorrer as lições em ordem sequencial -->
+            <a href="curso_aula1.html" data-lesson="1" class="lesson-item"><li>O que vamos aprender no Módulo 1? Boas Vindas!</li></a>
+            <a href="curso_aula2.html" data-lesson="2" class="lesson-item"><li>Aula 02 - Psicologia das Cores</li></a>
+            <a href="curso_aula3.html" data-lesson="3" class="lesson-item"><li>Aula 03 - Representando cores com CSS</li></a>
+            <a href="curso_aula4.html" data-lesson="4" class="lesson-item"><li>Aula 04 - Harmonia das Cores</li></a>
+        </ul>
+        
+    </div>
+    <div id="main">
+        <header>
+            <div class="logo">VISION TECH</div>
+            <nav>
+                <!-- 'openNav()' para ao executar essa function que abre o menu lateral, o conteúdo se acoplar e não ocorrer bugs visuais.-->
+                <button class="openbtn" onclick="openNav()">☰</button>
+                <!-- Barra de progresso -->
+                <div class="progress-container">
+                    <!-- Porcentagem barra de progresso-->
+                    <div class="progress-percentage" id="progressPercentage">0% completo</div>
+                    <div class="progress-bar">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+                <!-- Navegação (<) e (>)-->
+                <div class="nav-arrows">
+                    <a href="#" id="prevLesson" class="disabled"><</a>
+                    <a href="#" id="nextLesson">></a>
+                </div>
+                <!-- CheckBox -->
+                <a href="#" class="mark-complete">
+                    <input type="checkbox" id="completeCheckbox">
+                    <label for="completeCheckbox">Concluída</label>
+                </a>
+                <!-- Perfil do user -->
+                <!-- Perfil do user -->
+                <a href="#" class="profile"><i class="fas fa-user"></i></a>
+            </nav>
+        </header>
+        <!-- Conteúdo do curso -->
+        <div class="content">
+            <main class="main-content">
+                <h1>Aula 01 - O que vamos aprender no Módulo 1? Boas Vindas!</h1>
+                <p>CURSO - HTML & CSS | Módulo 1 | 4 HORAS | Aula 01</p>
+                <button class="in-progress">EM ANDAMENTO</button>
+                <!-- Video Aula-->
+                <iframe width="1280" height="570" src="https://www.youtube.com/embed/jr0vAkMJrvQ" title="tentando jogar jogos de flash extremamente duvidosos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </main>
+        </div>
+    </div>
+    <script>
+        //Function em JS para abrir a sidebar/menu lateral
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        //Fechamento da sidebar/menu lateral
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        //Function de atualização da barra de progresso
+        function updateProgressBar(percentage) {
+            //Pega a div 'progressBar' do HTML
+            const progressBar = document.getElementById('progressBar'); //Transforma numa VAR
+            const progressPercentage = document.getElementById('progressPercentage'); // Progresso em %
+            progressBar.style.width = percentage + '%'; // Pega o num do parametro percentage e acrescenta um '%'
+            progressPercentage.textContent = percentage + '% completo'; //Retorna como texto o parametro percentage com '% completo'
+        }
+
+        // Calculo de progresso 
+        function calculateProgress() {
+            const totalLessons = 4; // Num total de lições
+            const completedLessons = parseInt(localStorage.getItem('completedLessons')) || 0; //Obtem o número de lições completadas do localStorage ou define como 0 se não houver
+            const progressPercentage = (completedLessons / totalLessons) * 100; //Atualiza a porcentagem da barra de progresso
+            updateProgressBar(progressPercentage); 
+        }
+
+        //Function da checkBox
+        function markComplete() {
+            let completedLessons = parseInt(localStorage.getItem('completedLessons')) || 0;
+            const currentLesson = parseInt(document.querySelector('[data-lesson]').getAttribute('data-lesson'));
+            if (completedLessons < currentLesson) {
+                completedLessons = currentLesson;
+                localStorage.setItem('completedLessons', completedLessons);
+                calculateProgress();
+            }
+        }
+
+        function navigateLesson(direction) {
+            const lessonList = document.querySelectorAll('#lessonList a');
+            const currentLesson = parseInt(document.querySelector('[data-lesson]').getAttribute('data-lesson'));
+            let newLesson = currentLesson + direction;
+
+            if (newLesson > 0 && newLesson <= lessonList.length) {
+                const nextLessonLink = lessonList[newLesson - 1].getAttribute('href');
+                window.location.href = nextLessonLink;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateProgress();
+
+            document.getElementById('prevLesson').addEventListener('click', function() {
+                navigateLesson(-1);
+            });
+
+            document.getElementById('nextLesson').addEventListener('click', function() {
+                navigateLesson(1);
+            });
+
+            document.getElementById('completeCheckbox').addEventListener('change', function() {
+                if (this.checked) {
+                    markComplete();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

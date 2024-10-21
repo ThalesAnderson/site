@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION TECH Course</title>
+    <link rel="stylesheet" href="../css/curso_progresso.css">
+    <style>
+        .progress-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10px; /* Adjust as needed */
+        }
+
+        .progress-percentage {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+        }
+
+        .progress-bar div {
+            height: 100%;
+            background-color: #4caf50;
+        }
+
+        .nav-arrows {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            margin: 10px auto;
+        }
+
+        .nav-arrows a {
+            font-size: 24px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-arrows a.disabled {
+            color: #ccc;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul id="lessonList">
+            <li>Modulo 1</li>
+            <a href="curso_aula1.html" data-lesson="1"><li>Aula 01 - O que vamos aprender no Módulo 1? Boas Vindas!</li></a>
+            <a href="curso_aula2.html" data-lesson="2"><li>Aula 02 - Psicologia das Cores</li></a>
+            <a href="curso_aula3.html" data-lesson="3"><li>Aula 03 - Representando cores com CSS</li></a>
+            <a href="curso_aula4.html" data-lesson="4"><li>Aula 04 - Harmonia das Cores</li></a>
+        </ul>
+    </div>
+
+    <div id="main">
+        <header>
+            <div class="logo">VISION TECH</div>
+            <nav>
+                <button class="openbtn" onclick="openNav()">☰</button>
+                <div class="progress-container">
+                    <div class="progress-percentage" id="progressPercentage">0% completo</div>
+                    <div class="progress-bar">
+                        <div id="progressBar"></div>
+                    </div>
+                </div>
+                <div class="nav-arrows">
+                    <a href="#" id="prevLesson" class="disabled"><</a>
+                    <a href="#" id="nextLesson">></a>
+                </div>
+                <a href="#" class="mark-complete" onclick="markComplete()">Clique para marcar como concluída</a>
+                <a href="#" class="profile">PERFIL</a>
+            </nav>
+        </header>
+        <div class="content">
+            <main class="main-content">
+                <h1>Aula 01 - O que vamos aprender no Módulo 1? Boas Vindas!</h1>
+                <p>CURSO - HTML & CSS | Módulo 1 | 4 HORAS | Aula 01</p>
+                <button class="in-progress">EM ANDAMENTO</button>
+                <div class="video-placeholder"></div>
+            </main>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        function updateProgressBar(percentage) {
+            const progressBar = document.getElementById('progressBar');
+            const progressPercentage = document.getElementById('progressPercentage');
+            progressBar.style.width = percentage + '%';
+            progressPercentage.textContent = percentage + '% completo';
+        }
+
+        function calculateProgress() {
+            const totalLessons = 4; // Total number of lessons
+            const completedLessons = parseInt(localStorage.getItem('completedLessons')) || 0;
+            const progressPercentage = (completedLessons / totalLessons) * 100;
+            updateProgressBar(progressPercentage);
+        }
+
+        function markComplete() {
+            let completedLessons = parseInt(localStorage.getItem('completedLessons')) || 0;
+            const currentLesson = parseInt(document.querySelector('[data-lesson]').getAttribute('data-lesson'));
+            if (completedLessons < currentLesson) {
+                completedLessons = currentLesson;
+                localStorage.setItem('completedLessons', completedLessons);
+                calculateProgress();
+            }
+        }
+
+        function navigateLesson(direction) {
+            const lessonList = document.querySelectorAll('#lessonList a');
+            const currentLesson = parseInt(document.querySelector('[data-lesson]').getAttribute('data-lesson'));
+            let newLesson = currentLesson + direction;
+
+            if (newLesson > 0 && newLesson <= lessonList.length) {
+                const nextLessonLink = lessonList[newLesson - 1].getAttribute('href');
+                window.location.href = nextLessonLink;
+            }
+            updateNavArrows();
+        }
+
+        function updateNavArrows() {
+            const lessonList = document.querySelectorAll('#lessonList a');
+            const currentLesson = parseInt(document.querySelector('[data-lesson]').getAttribute('data-lesson'));
+            document.getElementById('prevLesson').classList.toggle('disabled', currentLesson <= 1);
+            document.getElementById('nextLesson').classList.toggle('disabled', currentLesson >= lessonList.length);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateProgress();
+            updateNavArrows();
+
+            document.getElementById('prevLesson').addEventListener('click', function() {
+                if (!this.classList.contains('disabled')) {
+                    navigateLesson(-1);
+                }
+            });
+
+            document.getElementById('nextLesson').addEventListener('click', function() {
+                if (!this.classList.contains('disabled')) {
+                    navigateLesson(1);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

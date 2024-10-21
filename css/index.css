@@ -156,6 +156,73 @@ main {
     color: black;
 }
 
+/* Teste de cores zebras do site */
+div#cor-beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Teste de cores zebras do site */
+    height: 770px;
+}
+
+.tit-beneficios{
+    justify-content: center;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.tit-beneficios h1 {
+    text-align: center;
+    margin-top: 0%;
+    color: white;
+}
+
+.icones {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-left: 5%;
+}
+
+.box-imagem img {
+    margin-top: 10px;
+}
+
+.conteudo-box-icones{
+    transition: transform 0.5s ease-in-out;
+    width: 20%;
+}
+
+
+
+.conteudo-box-icones:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1); 
+}
+
+/* Teste de cores zebras do site */
+.conteudo-box-icones h6{
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Teste de cores zebras do site */
+.conteudo-box-icones p{
+    font-size: 16px;
+    line-height: 22px;
+    display: inline;
+    color: white;
+}
+
 /*---------------------------SOBRE----------------------------------*/
 
 .separar {
@@ -219,6 +286,93 @@ main {
     padding: 5px 15px;
     margin-top: 55px;
     border-radius: 8px;
+}
+
+.site-footer {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.about h3, .social h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.links h3 {
+    margin-left: 60px;
+}
+
+.about p {
+    color: #666;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 60px;
+}
+
+.links ul li {
+    margin-bottom: 15px;
+}
+
+.links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #000;
+}
+
+.social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social ul li {
+    display: column;
+    margin-right: 10px;
+}
+
+.social a {
+    color: #666;
+    text-decoration: none;
+    transition: all ease-in-out 0.2s;
+}
+
+.social a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
 }
 
 
@@ -442,5 +596,59 @@ main {
 
     .box_ilustracao {
         margin: 0px;
+    }
+}
+
+
+/* Celula */
+@media (max-width: 320px) {
+    .logo img {
+        width: 30px;
+    }
+
+    .menu_button_mobile {
+        font-size: 2em;
+    }
+
+    .menu_mobile {
+        text-align: center;
+    }
+
+    .dropdown:hover .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-width: 180px;
+        height: 200px;
+        padding: 10px 15px 10px 0px;
+    }
+
+    .apresentacao {
+        background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
+        background-size: 60%;
+    }
+
+    div#cor-beneficio {
+        height: 100%;
+        margin: 0px;
+    }
+
+    .icones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .tit-beneficios {
+        margin: 0px;
+    }
+
+    .tit-beneficios h1 {
+       margin-top: 0px;
     }
 }

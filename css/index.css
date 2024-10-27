@@ -223,6 +223,24 @@ div#cor-beneficio {
 
 /*---------------------------SOBRE----------------------------------*/
 
+.background {
+    width: 100%;
+    position: relative;
+}
+
+.background::before {
+    content: '';
+    background-image: url(../img/background.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:0;
+    opacity: 30%;
+}
+
 .separar {
     height: 850px;
     display: flex;
@@ -233,6 +251,7 @@ div#cor-beneficio {
 
 .separar #imagem {
     width: 27%;
+    z-index: 1;
 }
 
 /* Ajustando o estilo da caixa de texto */
@@ -244,6 +263,7 @@ div#cor-beneficio {
     border: 1px solid black;
     border-radius: 10px;
     background-image: linear-gradient(-45deg, rgb(230, 230, 230), white);
+    z-index: 1;
 }
 
 .about_box h1 {

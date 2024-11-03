@@ -1,280 +1,110 @@
 @charset "UTF-8";
 
+/* Cabeçalho */
 header {
-    height: 250px;
+  height: 180px;
 }
 
+
+/* Sobre nós */
 section#sobre_nos {
-    margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-bottom: 100px;
+  background-color: black;
 }
 
-section#sobre_nos h1{
-    text-align: center;
+section#sobre_nos h1 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
 }
 
-section#sobre_nos p{
-    text-align: center;
+section#sobre_nos p {
+  height: 300px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
 }
 
 
+/* Seção dos itens */
+section#cultura_organizacional {
+  text-align: center;
+  font-size: 56px;
+  margin-bottom: 50px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
+section#missao,
+section#visao,
+section#valores {
+  margin-bottom: 100px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 40px;
+  color: black;
+}
+
+.texto {
+  font-size: 24px;
+}
+
+.alinhar {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon {
+  width: auto;
+  margin-right: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
 
 
-/* From Uiverse.io by UwUTastisch */ 
-.tooltip-container {
-    position: relative;
-    transition: all 0.8s;
-    font-size: 100px;
-    /*padding: 0.7em 1.8em;*/
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    left: 80px;
-  }
-  
-  .tooltip-container .borde-back {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: none;
-  }
-  
-  .tooltip-container .icon {
-    width: 190px;
-    height: 190px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.8s ease-in-out;
-    z-index: 10;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .tooltip {   
-    font-family: 'Poppins' sans-serif;
-    position: absolute;
-    top: -2;
-    transform: scaleX(0);
-    transform-origin: left center;
-    height: 100px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.6s;
-    border-radius: 50px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-top: 14px;
-    padding-right: 200px;
-    padding-bottom: 14px;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 800px;
-    padding-left: 80px;
-    margin-left: -40px;
-    left: 100%;
-    z-index: -10;
-  }
-  
-  .tooltip-container:hover .tooltip {
-    transform: unset;
-    /* Altere para a posição desejada (a direita) */
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: -10;
-  }
+/* Sessão dos clientes */
+section#clientes {
+  height: 500px;
+  margin-top: 100px;
+  background-color: black;
+}
 
-  .tooltip-container:hover {
-    transform: translateX(-50px);
-    transition: 0.5s linear;
-  }
+section#clientes h1 {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  color: white;
+  border-bottom: 2px dashed white;
+}
 
+section#feedback {
+  height: 500px;
+  margin-top: 100px;
+}
 
-
-  .container {
-    position: relative;
-    transition: all 0.8s;
-    font-size: 100px;
-    /*padding: 0.7em 1.8em;*/
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    left: 80px;
-  }
-  
-  .container .borde {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: none;
-  }
-  
-  .container .icone {
-    width: 100px;
-    height: 140px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.8s ease-in-out;
-    z-index: 10;
-  }
-  
-  .texto {
-    font-family: 'Poppins' sans-serif;
-    position: absolute;
-    top: -2;
-    transform: scaleX(0);
-    transform-origin: left center;
-    height: 100px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.6s;
-    border-radius: 50px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-top: 14px;
-    padding-right: 200px;
-    padding-bottom: 14px;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 800px;
-    padding-left: 80px;
-    margin-left: -40px;
-    left: 100%;
-    z-index: -10;
-  }
-  
-  .container:hover .texto {
-    transform: unset;
-    /* Altere para a posição desejada (a direita) */
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: -10;
-  }
-
-  .container:hover {
-    transform: translateX(-50px);
-    transition: 0.5s linear;
-  }
-
-
-
-
-
-
-  .contaner {
-    position: relative;
-    transition: all 0.8s;
-    font-size: 100px;
-    /*padding: 0.7em 1.8em;*/
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    left: 80px;
-  }
-  
-  .contaner .back {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: none;
-  }
-  
-  .contaner .iconi {
-    width: 160px;
-    height: 170px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.8s ease-in-out;
-    z-index: 10;
-  }
-  
-  .testo {
-    font-family: 'Poppins' sans-serif;
-    position: absolute;
-    top: -2;
-    transform: scaleX(0);
-    transform-origin: left center;
-    height: 100px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.6s;
-    border-radius: 50px;
-    background-color: black;
-    display: flex;
-    align-items:center;
-    justify-content:first baseline;
-    padding-top: 30px;
-    padding-right: 200px;
-    padding-bottom: 30px;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 800px;
-    padding-left: 80px;
-    margin-left: -40px;
-    left: 100%;
-    z-index: -10;
-  }
-  
-  .contaner:hover .testo {
-    transform: unset;
-    /* Altere para a posição desejada (a direita) */
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: -10;
-  }
-
-  .contaner:hover {
-    transform: translateX(-50px);
-    transition: 0.5s linear;
-  }
-
-  section#valores {
-    margin-bottom: 200px;
-  }
-
-  section#clientes{
-    margin-bottom: 300px;
-  }
+section#feedback h1 {
+  text-align: center;
+  font-size: 40px; 
+}

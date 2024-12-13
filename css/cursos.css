@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*Formatação da tela de Cursos*/
 
 /*Definicoes globais*/
 *{
@@ -23,10 +22,8 @@ body{
 .navbar{
     background-color: white;
     padding: 40px;
-    position: sticky;
     top: 0;
     box-shadow: 2px 0px 5px #9c9c9c;
-    z-index: 99;
 }
 
 /*Estiliza a DIV abaixo da NAV*/
@@ -97,12 +94,21 @@ button[type="submit"]:hover {
 }
 
 .cursos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
     margin: 30px;
 }
 
 .cursos h1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
     font-size: 60px;
-    margin: 60px 25px 2px;
+    margin: 100px 25px 60px;
 }
 
 .cursos p{
@@ -112,19 +118,30 @@ button[type="submit"]:hover {
 }
 
 .content-cursos{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
     margin-bottom: 100px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px 0px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     padding: 20px;
+    height: 600px;
+    width: 900px;
     transition: 0.8s ease-in-out;
 }
 
+.content-cursos:hover{
+    transform: translateY(-12px);
+    transition: all 0.4s;
+    font-weight: bold;
+    background-color: rgb(235, 234, 234);
+    color: black;
+}
+
 .content-cursos img{
-    margin-bottom: 20px;
-    border-radius: 9px;
+    
 }
 
 .detalhes-cursos{
@@ -134,14 +151,6 @@ button[type="submit"]:hover {
 .detalhes-cursos p{
     margin-top: 10px;
     margin-left: 3px;
-}
-
-.content-cursos:hover{
-    transform: translateY(-12px);
-    transition: all 0.4s;
-    font-weight: bold;
-    background-color: rgb(235, 234, 234);
-    color: black;
 }
 
 .cursos a{

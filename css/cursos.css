@@ -122,11 +122,10 @@ button[type="submit"]:hover {
     justify-content: flex-end;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 20px;/* Aqui tinha um margin-bottom de 100px pra separar os cursos */
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 10px 0px;
     cursor: pointer;
-    padding: 20px;
     height: 600px;
     width: 900px;
     transition: 0.8s ease-in-out;
@@ -140,17 +139,21 @@ button[type="submit"]:hover {
     color: black;
 }
 
-.content-cursos img{
-    
-}
-
 .detalhes-cursos{
-    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 900px;
 }
 
 .detalhes-cursos p{
     margin-top: 10px;
     margin-left: 3px;
+}
+
+.descricao-curso {
+    margin-bottom: 150px;
 }
 
 .cursos a{

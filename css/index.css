@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/*----INICIO HEADER DO SITE*/
-
 /* Definindo a fonte do site */
 
 html,
@@ -387,7 +385,6 @@ div#cor-beneficio {
     text-align: center;
     color: #666;
 }
-
 
 /* Utilizando Media Queries no site */
 

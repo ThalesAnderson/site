@@ -9,8 +9,8 @@ body {
 }
 
 main {
-    max-width: 100%;
-    margin: 0px 0px 0px 0px;
+    max-width: 100vw;
+    margin: 0px;
 }
 
 /*img de fundo do header. Logo grande da Vision Tech*/
@@ -161,7 +161,6 @@ div#cor-beneficio {
     align-items: center;
     justify-content: center;
     background-color: black; /* Teste de cores zebras do site */
-    height: 770px;
 }
 
 .tit-beneficios{
@@ -182,9 +181,6 @@ div#cor-beneficio {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    margin-top: 80px;
-    margin-right: 0px;
-    margin-left: 5%;
 }
 
 .box-imagem img {
@@ -606,186 +602,5 @@ div#cor-beneficio {
 
     .box_ilustracao {
         margin: 0px;
-    }
-}
-
-
-/* Celular */
-@media (max-width: 320px) {
-    .logo img {
-        width: 30px;
-    }
-
-    .menu_button_mobile {
-        font-size: 2em;
-    }
-
-    .dropdown:hover .menu_mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        min-width: 180px;
-        height: 200px;
-        padding: 10px 15px 10px 0px;
-    }
-
-    .apresentacao {
-        background: url(/img/logo-vision.jpg) no-repeat 50% 20%;
-        background-size: 60%;
-    }
-
-    .apresentacao_conteudo {
-        margin-top: 85%;
-    }
-
-    /* Texto 01 da Vision */
-    .tit-apresentacao {
-        font-size: 16px;
-    }
-
-    /* Texto 02 da Vision */
-    .descricao-apresentacao {
-        font-size: 14px;
-    }
-
-    div#cor-beneficio {
-        height: 100%;
-        margin: 0px;
-    }
-
-    .tit-beneficios {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .conteudo-box-icones{
-        width: 60%;
-    }
-
-    .icones{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 0px;
-    }
-
-    img#imagem {
-        display: none;
-    }
-
-    .separar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .about_box {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        width: 90%;
-        height: 90%;
-        padding: 0px;
-        margin: 0px;
-        align-content: flex-start;
-    }
-    
-    .about_box h1 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .about_box li {
-        margin-bottom: 15px;
-        padding: 10px;
-    }
-    
-    .about_box span {
-        font-size: 15px;
-        margin-top: 20px;
-    }
-    
-    .verificado {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .btn_saiba_mais {
-        font-size: 20px;
-        margin-top: 0px;
-    }
-
-    .site-footer {
-        padding-top: 60px;
-        padding-bottom: 30px;
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .footer-section-about {
-        display:none;
-    }
-    
-    .footer-section-about h3, p{
-        display: none;
-    }
-    
-    .social h3 {
-        text-align: center;
-        text-align: center;
-    }
-    
-    .links h3 {
-        text-align: center;
-        margin: 0px;
-    }
-    
-    .about p {
-        color: #666;
-    }
-    
-    .contact span {
-        display: none;
-    }
-
-    .links ul {
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    .links ul li {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    
-    .social ul {
-        text-align:center;
-    }
-    
-    .social ul li {
-        margin-right: 0px;
-        text-align:center;
-    }
-    
-    .footer-bottom {
-        font-size: 14px;
-        margin-top: 50px;
     }
 }

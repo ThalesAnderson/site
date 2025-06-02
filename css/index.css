@@ -163,7 +163,7 @@ div#cor-beneficio {
     background-color: black; /* Teste de cores zebras do site */
 }
 
-.tit-beneficios{
+.tit-beneficios {
     justify-content: center;
     text-align: center;
     margin-top: 0%;
@@ -199,65 +199,46 @@ div#cor-beneficio {
 
 /* Teste de cores zebras do site */
 .conteudo-box-icones h6{
-    display: flex;
     font-size: 22px;
     font-weight: bold;
-    display: inline;
     color: white;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 /* Teste de cores zebras do site */
 .conteudo-box-icones p{
     font-size: 16px;
     line-height: 22px;
-    display: inline;
     color: white;
 }
 
 /*---------------------------SOBRE----------------------------------*/
 
-.background {
-    width: 100%;
-    position: relative;
-}
-
-.background::before {
-    content: '';
-    background-image: url(../img/background.webp);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom: 0;
-    left:0;
-    opacity: 30%;
-}
-
 .separar {
-    height: 850px;
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: space-evenly;
+    justify-content: right;
+    background-image: url(../img/mulher.png);
+    background-repeat: no-repeat;
+    background-size: 42vh;
+    background-position:15% bottom;
+    padding: 80px 100px 80px 80px;
 }
 
-.separar #imagem {
-    width: 27%;
-    z-index: 1;
+.background {
+    background-image: url(../img/background.webp);
 }
 
 /* Ajustando o estilo da caixa de texto */
 .about_box {
-    float: right;
-    height: 75%;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 50px 0px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 10px;
     background-image: linear-gradient(-45deg, rgb(230, 230, 230), white);
-    z-index: 1;
 }
 
 .about_box h1 {
@@ -292,11 +273,10 @@ div#cor-beneficio {
 .btn_saiba_mais {
     font-size: 25px;
     text-decoration: none;
-    float: right;
     background: black;
     color: white;
     padding: 5px 15px;
-    margin-top: 55px;
+    margin-top: 50px;
     border-radius: 8px;
 }
 

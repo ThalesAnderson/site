@@ -3,13 +3,41 @@
 @media screen and (max-width: 679px) {
 
     /*CELULAR */
-    .logo img {
-        width: 35px;
+
+    html,
+    body {
+        width: 100%;
+
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .logo-marca {
+        width: 40px;
+    }
+
+    .menu {
+        display: none;
     }
 
     .apresentacao {
-        background-position: 50% 15%;
-        background-size: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-position: 50% 18%;
+        background-size: 75%;
+
+    }
+
+    .apresentacao_conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: 280px 0px 80px 0px;
     }
 
     .tit-apresentacao {
@@ -18,6 +46,8 @@
     }
 
     .descricao-apresentacao {
+        display: flex;
+        justify-content: center;
         font-size: 18px;
         margin: 20px 30px 0px 30px;
     }
@@ -30,12 +60,16 @@
         margin: 0px;
     }
 
+    .btn_comecar {
+        margin-top: 30px;
+    }
+
     .icones {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         gap: 20px;
-        margin: 30px 35px;
+        margin: 30px 50px;
     }
 
     .conteudo-box-icones {
@@ -50,36 +84,74 @@
         justify-content: center;
         flex-wrap: wrap;
         background-image: none;
+        height: 100%;
         padding: 0px;
     }
 
     .about_box {
         display: flex;
-        flex-wrap: nowrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 40vh;
-        width: 80vw;
-        margin: 0px;
+        width: 70%;
+    }
+
+    .about_box>h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 5%;
     }
 
     .about_box_ul {
-        margin: 40px 0px 0px 0px
+        margin: 10px 0px 0px 0px
     }
 
     .about_box span {
         font-size: 18px;
     }
 
+    .btn_saiba_mais {
+        margin-top: 20px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer-section-about {
+        width: 40%;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .social {
+        width: 20%;
+        padding: 0 5%;
+        margin: 0px;
+    }
 }
 
 @media screen and (min-width: 680px) and (max-width: 922px) {
 
     /* TABLET */
-    .logo img {
-        margin-top: 0px;
-        margin-left: 10px;
+
+    html,
+    body {
+        width: 100%;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .logo-marca {
+        width: 50px;
     }
 
     /* Menu de PC desaparece */
@@ -87,101 +159,39 @@
         display: none;
     }
 
-    /* Dropdown-content - Opções após clicar no menu */
-    .menu_mobile {
-        display: none;
-        list-style: none;
-        right: 100%;
-        background-color: white;
-        border: 1px solid black;
-        position: absolute;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Dropdown em si */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        margin-top: 0px;
-    }
-
-    /* O container que envolve todo o menu para movimentar */
-    .container_menu_mobile {
-        display: flex;
-        justify-content: right;
-        margin-top: 0px;
-        margin-right: 2%;
-    }
-
-    /* A imagem que serve como botão no menu */
-    .menu_button_mobile {
-        font-size: 3em;
-        background-color: transparent;
-        border: none;
-    }
-
-    .menu_li_mobile {
-        display: inline-block;
-        background-color: rgb(230, 230, 230);
-        margin-left: 22px;
-    }
-
-    .menu_li_mobile:hover {
-        font-weight: bold;
-    }
-
-    /* As opções dentro do menu */
-    .menu_link_mobile {
-        font-size: 28px;
-        text-decoration: none;
-        color: black;
-    }
-
-    /* Fazer o menu aparecer ao clicar em cima */
-    .dropdown:hover .menu_mobile {
-        display: inline;
-        min-width: 580px;
-        top: 90%;
-        right: 90%;
-    }
-
-    .dropdown:hover .logo {
-        display: none;
-    }
-
     /* Logo da Vision Tech */
     .apresentacao {
-        background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
-        background-size: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background: url(/img/logo-vision.jpg) no-repeat 50% 18%;
+        background-size: 80%;
     }
 
     /* Container dos textos 01 e 02 */
     .apresentacao_conteudo {
-        display: grid;
-        justify-content: center;
-        margin-top: 50%;
-        margin-right: 0px;
-        margin-bottom: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: 50% 0px 5% 0px;
     }
 
     /* Texto 01 da Vision */
     .tit-apresentacao {
-        font-size: 25px;
+        font-size: 26px;
         text-align: center;
         color: black;
-        line-height: 36px;
+        line-height: 50px;
     }
 
     /* Texto 02 da Vision */
     .descricao-apresentacao {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
-        line-height: 24px;
+        line-height: 26px;
         color: black;
-    }
-
-    div#linha_vertical {
-        display: none;
     }
 
     .container_comecar {
@@ -193,16 +203,6 @@
         font-size: 16px;
         text-align: center;
         margin-top: 10px;
-    }
-
-    .menu {
-        text-align: end;
-        margin-top: 0px;
-    }
-
-    /* Linha vertical que tem no desktop */
-    div#linha_vertical {
-        display: none;
     }
 
     .linha {
@@ -228,48 +228,51 @@
     }
 
     .tit-beneficios {
-        margin-top: 0;
+        margin-top: 8%;
     }
 
     .tit-beneficios h1 {
         margin-top: 0px;
     }
 
-    .separar {
-        height: 550px;
+    .icones {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        align-items: stretch;
+        gap: 20px;
+        margin: 30px 50px;
     }
 
-    .separar #imagem {
-        width: 42%;
-        margin-top: 65px;
-        margin-left: 40px;
+    .conteudo-box-icones {
+        flex: 1 1 40%;
+        margin: 5px;
+    }
+
+    .separar {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background-image: none;
     }
 
     .about_box {
-        height: 75%;
-        width: 35%;
-        padding: 15px 10px 15px 10px;
-        margin-top: 30px;
-        margin-right: 60px;
+        width: 80%;
+        margin: 5% 0%;
     }
 
     .about_box li {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .about_box h1 {
-        font-size: 17px;
+        font-size: 32px;
         display: flex;
         justify-content: center;
-        padding: 0px 0px 0px 10px;
-        margin-bottom: 20px;
+        margin: 30px 0px 30px 0px;
     }
 
     .about_box span {
-        font-size: 13px;
+        font-size: 19px;
         margin-top: 0px;
         line-height: 20px;
     }
@@ -279,13 +282,103 @@
     }
 
     .verificado {
-        width: 8%;
-        height: 8%;
+        width: 5%;
+        height: 5%;
     }
 
-    .box_ilustracao {
-        margin: 0px;
+    .btn_saiba_mais {
+        font-size: 26px;
+        text-decoration: none;
+        background: black;
+        color: white;
+        padding: 5px 15px;
+        margin-top: 40px;
+        border-radius: 8px;
     }
 }
 
-@media screen and (min-width: 922px) and (max-width: 1200px) {}
+
+@media screen and (min-width: 922px) and (max-width: 1200px) {
+
+    /* Notebook */
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-marca {
+        width: 55px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        padding-left: 0px;
+        margin: 20px 10px 0px 0px;
+    }
+
+    .menu_li {
+        margin-left: 30px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu_li:hover {
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    .btn_signIn {
+        margin-right: 20px;
+    }
+
+    .btn_signUp {
+        display: flex;
+        margin: 20px 20px 0px 0px;
+    }
+
+    .apresentacao {
+        display: flex;
+        background: url(/img/logo-vision.jpg) no-repeat 6% 46%;
+        background-size: 40%;
+    }
+    
+    .apresentacao_conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        margin: 10% 2% 5% 0%;
+    }
+
+    .tit-apresentacao {
+        font-size: 19px;
+        text-align: center;
+        color: black;
+        line-height: 28px;
+    }
+
+    /* Texto 02 da Vision */
+    .descricao-apresentacao {
+        font-size: 17px;
+        text-align: center;
+        line-height: 22px;
+        color: black;
+    }
+
+    .conteudo-box-icones p {
+        text-align: center;
+    }
+
+    .conteudo-box-icones h6 {
+        text-align: center;
+    }
+
+    .box-image {
+        text-align: center;
+    }
+
+}

@@ -4,13 +4,15 @@
 
 html,
 body {
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     margin: 0px;
+    padding: 0px;
 }
 
 main {
-    max-width: 100vw;
     margin: 0px;
+    padding: 0px;
 }
 
 /*img de fundo do header. Logo grande da Vision Tech*/
@@ -21,10 +23,8 @@ main {
 
 /* Propoção da img da logo "Falcão da Vision" no canto esquerdo em cima */
 .logo img {
-    width: 60px;
-    margin-top: -30px;
+    width: 30x;
     margin-left: 15px;
-    position: absolute;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -114,9 +114,6 @@ main {
     flex-direction: column;
     align-content: flex-end;
     align-items: center;
-    margin-top: 200px;
-    margin-right: 200px;
-    margin-bottom: 10%;
 }
 
 .tit-apresentacao {
@@ -234,7 +231,7 @@ div#cor-beneficio {
     flex-direction: column;
     align-items: center;
     width: 40%;
-    margin: 50px 0px;
+    margin: 10% 0px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 10px;
@@ -244,7 +241,7 @@ div#cor-beneficio {
 .about_box h1 {
     font-family: 'Poppins' sans-serif;
     font-size: 40px;
-    margin-top: 0px;
+    margin: 0px 0px 50px 0px;
     margin-bottom: 50px;
 }
 
@@ -286,7 +283,7 @@ div#cor-beneficio {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     padding: 0 20px;
 }
@@ -360,227 +357,4 @@ div#cor-beneficio {
     margin-top: 30px;
     text-align: center;
     color: #666;
-}
-
-/* Utilizando Media Queries no site */
-
-/* Tablet */
-@media (max-width: 768px) {
-    body {
-        margin: 0px;
-    }
-
-    main {
-        margin: 0px;
-    }
-
-    .logo img {
-        margin-top: 0px;
-        margin-left: 10px;
-    }
-
-    /* Menu de PC desaparece */
-    .menu {
-        display: none;
-    }
-
-    /* Dropdown-content - Opções após clicar no menu */
-    .menu_mobile {
-        display: none;
-        list-style: none;
-        right: 100%;
-        background-color: white;
-        border: 1px solid black;
-        position: absolute;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Dropdown em si */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        margin-top: 0px;
-    }
-
-    /* O container que envolve todo o menu para movimentar */
-    .container_menu_mobile {
-        display: flex;
-        justify-content: right;
-        margin-top: 0px;
-        margin-right: 2%;
-    }
-
-    /* A imagem que serve como botão no menu */
-    .menu_button_mobile {
-        font-size: 3em;
-        background-color: transparent;
-        border: none;
-    }
-
-    .menu_li_mobile {
-        display: inline-block;
-        background-color: rgb(230, 230, 230);
-        margin-left: 22px;
-    }
-
-    .menu_li_mobile:hover {
-        font-weight: bold;
-    }
-
-    /* As opções dentro do menu */
-    .menu_link_mobile {
-        font-size: 28px;
-        text-decoration: none;
-        color: black;
-    }
-
-    /* Fazer o menu aparecer ao clicar em cima */
-    .dropdown:hover .menu_mobile {
-        display: inline;
-        min-width: 580px;
-        top: 90%;
-        right: 90%;
-    }
-
-    .dropdown:hover .logo {
-        display: none;
-    }
-
-    /* Logo da Vision Tech */
-    .apresentacao {
-        background: url(/img/logo-vision.jpg) no-repeat 50% 25%;
-        background-size: 60%;
-    }
-
-    /* Container dos textos 01 e 02 */
-    .apresentacao_conteudo {
-        display: grid;
-        justify-content: center;
-        margin-top: 50%;
-        margin-right: 0px;
-        margin-bottom: 0%;
-    }
-
-    /* Texto 01 da Vision */
-    .tit-apresentacao {
-        font-size: 25px;
-        text-align: center;
-        color: black;
-        line-height: 36px;
-    }
-
-    /* Texto 02 da Vision */
-    .descricao-apresentacao {
-        font-size: 18px;
-        text-align: center;
-        line-height: 24px;
-        color: black;
-    }
-
-    div#linha_vertical {
-        display: none;
-    }
-
-    .container_comecar {
-        text-align: center;
-        margin: 20px 0px 50px 0px;
-    }
-
-    .btn_comecar {
-        font-size: 16px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .menu {
-        text-align: end;
-        margin-top: 0px;
-    }
-
-    /* Linha vertical que tem no desktop */
-    div#linha_vertical {
-        display: none;
-    }
-
-    .linha {
-        display: none;
-    }
-
-    .btn_saiba_mais {
-        font-size: 16px;
-        text-decoration: none;
-        float: right;
-        background: black;
-        color: white;
-        padding: 5px 15px;
-        margin-top: 10px;
-        border-radius: 8px;
-    }
-
-    div#cor-beneficio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .tit-beneficios{
-        margin-top: 0;
-    }
-
-    .tit-beneficios h1 {
-        margin-top: 0px;
-    }
-
-    .separar {
-        height: 550px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .separar #imagem {
-        width: 42%;
-        margin-top: 65px;
-        margin-left: 40px;
-    }
-
-    .about_box {
-        height: 75%;
-        width: 35%;
-        padding: 15px 10px 15px 10px;
-        margin-top: 30px;
-        margin-right: 60px;
-    }
-
-    .about_box li {
-        margin-bottom: 15px;
-    }
-
-    .about_box h1 {
-        font-size: 17px;
-        display: flex;
-        justify-content: center;
-        padding: 0px 0px 0px 10px;
-        margin-bottom: 20px;
-    }
-
-    .about_box span {
-        font-size: 13px;
-        margin-top: 0px;
-        line-height: 20px;
-    }
-
-    .about_box_ul {
-        padding: 0px;
-    }
-
-    .verificado {
-        width: 8%;
-        height: 8%;
-    }
-
-    .box_ilustracao {
-        margin: 0px;
-    }
 }

@@ -211,16 +211,6 @@ div#cor-beneficio {
 
 /*---------------------------SOBRE----------------------------------*/
 
-.separar {
-    display: flex;
-    justify-content: right;
-    background-image: url(../img/mulher.png);
-    background-repeat: no-repeat;
-    background-size: 42vh;
-    background-position:15% bottom;
-    padding: 80px 100px 80px 80px;
-}
-
 .background {
     background-image: url(../img/background.webp);
 }
@@ -231,7 +221,7 @@ div#cor-beneficio {
     flex-direction: column;
     align-items: center;
     width: 40%;
-    margin: 10% 0px;
+    margin: 0px;
     padding: 30px;
     border: 1px solid black;
     border-radius: 10px;

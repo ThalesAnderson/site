@@ -7,7 +7,6 @@
     html,
     body {
         width: 100%;
-
     }
 
     .logo {
@@ -94,6 +93,7 @@
         justify-content: center;
         align-items: center;
         width: 70%;
+        margin: 8% 0% 8% 0%;
     }
 
     .about_box>h1 {
@@ -295,17 +295,21 @@
         margin-top: 40px;
         border-radius: 8px;
     }
+
+    .footer-content {
+        margin: 0% 4%;
+    }
 }
 
 
-@media screen and (min-width: 922px) and (max-width: 1200px) {
+@media screen and (min-width: 923px) and (max-width: 1200px) {
 
     /* Notebook */
 
     .topo {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .logo-marca {
@@ -322,6 +326,7 @@
     }
 
     .menu_li {
+        font-size: 18px;
         margin-left: 30px;
         transition: transform 0.5s ease-in-out;
     }
@@ -338,12 +343,13 @@
 
     .btn_signUp {
         display: flex;
-        margin: 20px 20px 0px 0px;
+        margin: 20px 16px 0px 0px;
     }
 
     .apresentacao {
         display: flex;
-        background: url(/img/logo-vision.jpg) no-repeat 6% 46%;
+        flex-direction: column;
+        background: url(/img/logo-vision.jpg) no-repeat 6% 50%;
         background-size: 40%;
     }
     
@@ -369,6 +375,18 @@
         color: black;
     }
 
+    div#cor-beneficio {
+        margin-top: 6%;
+    }
+
+    .tit-beneficios {
+        margin: 8% 0% 6% 0%;
+    }
+
+    .icones {
+        margin: 0% 6% 8% 6%;
+    }
+
     .conteudo-box-icones p {
         text-align: center;
     }
@@ -381,4 +399,227 @@
         text-align: center;
     }
 
+    .separar {
+        display: flex;
+        justify-content: flex-end;
+        background-image: url(../img/mulher.png);
+        background-repeat: no-repeat;
+        background-position: 4% 100%;
+        background-size: 45%;
+        padding-top: 10%;
+    }
+
+    .about_box {
+        width: 40%;
+        margin: 0% 6% 6% 0%;
+    }
+
+    .about_box h1 {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        margin: 0% 6%;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .logo-marca {
+        width: 60px;
+    }
+
+    .menu_li {
+        font-size: 20px;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-direction: column;
+        background: url(/img/logo-vision.jpg) no-repeat 6% 50%;
+        background-size: 45%;
+    }
+
+    .apresentacao_conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        margin: 10% 4% 5% 0%;
+    }
+
+    .tit-apresentacao {
+        font-size: 24px;
+        text-align: center;
+        color: black;
+        line-height: 32px;
+    }
+
+    .descricao-apresentacao {
+        font-size: 20px;
+        text-align: center;
+        line-height: 26px;
+        color: black;
+    }
+
+    div#cor-beneficio {
+        margin-top: 6%;
+    }
+
+    .tit-beneficios {
+        font-size: 24px;
+        margin: 8% 0% 6% 0%;
+    }
+
+    .icones {
+        display: flex;
+        align-items: stretch;
+        margin: 0% 6% 8% 6%;
+    }
+
+    .conteudo-box-icones p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .conteudo-box-icones h6 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .box-image {
+        text-align: center;
+    }
+
+    .separar {
+        display: flex;
+        justify-content: flex-end;
+        background-image: url(../img/mulher.png);
+        background-repeat: no-repeat;
+        background-position: 5% 100%;
+        background-size: 40%;
+    }
+
+    .about_box {
+        width: 45%;
+        margin: 6% 3% 6% 0%;
+    }
+
+    .footer-content {
+        margin: 0% 6%;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1800px) {
+
+.topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .logo-marca {
+        width: 70px;
+    }
+
+    .menu_li {
+        font-size: 21px;
+        margin-left: 40px;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-direction: column;
+        background: url(/img/logo-vision.jpg) no-repeat 8% 56%;
+        background-size: 48%;
+    }
+
+    .apresentacao_conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        margin: 10% 4% 5% 0%;
+    }
+
+    .tit-apresentacao {
+        font-size: 28px;
+        text-align: center;
+        color: black;
+        line-height: 40px;
+    }
+
+    .descricao-apresentacao {
+        font-size: 22px;
+        text-align: center;
+        line-height: 28px;
+        color: black;
+    }
+
+    div#cor-beneficio {
+        margin-top: 6%;
+    }
+
+    .tit-beneficios {
+        font-size: 24px;
+        margin: 8% 0% 6% 0%;
+    }
+
+    .icones {
+        display: flex;
+        align-items: stretch;
+        margin: 0% 6% 8% 6%;
+    }
+
+    .conteudo-box-icones p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .conteudo-box-icones h6 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .box-image {
+        text-align: center;
+    }
+
+    .separar {
+        display: flex;
+        justify-content: flex-end;
+        background-image: url(../img/mulher.png);
+        background-repeat: no-repeat;
+        background-position: 15% 100%;
+        background-size: 550px;
+    }
+
+    .about_box {
+        width: 35%;
+        margin: 6% 10% 6% 0%;
+    }
+
+    .footer-content {
+        margin: 0% 6%;
+    }
+
+    .footer-section-about h3 {
+        font-size: 28px;
+    }
+
+    .footer-section-about p {
+        font-size: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 28px;
+    }
+
+    .footer-section  li {
+        font-size: 20px;
+    }
 }

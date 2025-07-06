@@ -282,6 +282,7 @@ div#cor-beneficio {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0% 6%; 
 }
 
 .footer-section-about {
@@ -344,7 +345,7 @@ div#cor-beneficio {
 
 .footer-bottom {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 8%;
     text-align: center;
     color: #666;
 }

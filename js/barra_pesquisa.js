@@ -5,7 +5,7 @@ function handleSearch() {
 
     // Seleciona todos os elementos com a classe 'content-cursos', que representam os cursos a serem pesquisados
     const cursos = document.querySelectorAll('.content-cursos');
-    
+
     // Variável para controlar se foram encontrados cursos relacionados à pesquisa
     let resultadosEncontrados = false;
 
@@ -13,7 +13,7 @@ function handleSearch() {
     cursos.forEach(curso => {
         // Obtém o conteúdo do elemento com a classe 'descricao-curso' dentro do curso atual e converte para minúsculas
         const descricao = curso.querySelector('.descricao-curso').textContent.toLowerCase();
-       
+
         // Verifica se a descrição do curso inclui o termo de pesquisa
         if (descricao.includes(searchTerm)) {
             // Se o termo de pesquisa estiver contido na descrição, exibe o curso

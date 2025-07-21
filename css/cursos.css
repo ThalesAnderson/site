@@ -5,14 +5,6 @@ html, body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 679px) {
-
-}
-
-@media screen and (min-width: 680px) and (max-width: 922px) {
-    
-}
-
 .container_topo {
     display: flex;
     justify-content: space-between;
@@ -141,4 +133,19 @@ button[type="submit"]:hover {
 
 .cursos a{
     text-decoration: none;
+}
+
+@media screen and (max-width: 679px) {
+.falcao {
+    width: 30px;
+}
+
+.falcao_a {
+    margin: 6px;
+}
+
+}
+
+@media screen and (min-width: 680px) and (max-width: 922px) {
+    
 }

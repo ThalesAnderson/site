@@ -40,7 +40,7 @@ main {
 
 .menu {
     display: flex;
-    margin-right: 20px;
+    margin-right: 80px;
     margin-top: 30px;
     flex-direction: row;
     justify-content: flex-end;
@@ -67,7 +67,7 @@ main {
     color: black;
 }
 
-/* Botão Sign In */
+/* Botão de logar */
 .btn_signIn {
     margin-left: 20px;
     text-decoration: none;
@@ -84,7 +84,7 @@ main {
     background-color: rgb(206, 206, 206);
 }
 
-/* Botão Sign Up */
+/* Botão de sair da conta */
 .btn_signUp {
     text-decoration: none;
     font-size: 16px;
@@ -102,12 +102,6 @@ main {
 }
 
 /* -----------Parte da Apresentação Box---------- */
-/* Clear & box */
-/* Limpa */
-.clear {
-    clear: both;
-}
-
 .apresentacao_conteudo {
     display: flex;
     flex-wrap: wrap;
@@ -265,6 +259,12 @@ div#cor-beneficio {
     padding: 5px 15px;
     margin-top: 50px;
     border-radius: 8px;
+    transition: background-color 1.0s, color 0.5s;
+}
+
+.btn_saiba_mais:hover {
+    background-color: rgb(204, 204, 204);
+    color: black;
 }
 
 .site-footer {

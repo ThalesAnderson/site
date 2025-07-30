@@ -23,30 +23,49 @@
 
     <div class="registro-page">
 
-        <img id="logo" src="/img/logo-vision.jpg">
-        <div id="quadrado_branco"></div>
-        <div id="quadrado_preto">
             <div class="form">
-                <form id="registro-form">
-                    <input type="text" placeholder="Email" id="email" />
-                    <input type="password" placeholder="Senha" id="senha" />
+
+                <form id="register-form">
+                    <input type="email" id="email" placeholder="Email" required />
+                    <input type="password" id="senha" placeholder="Senha" required />
                     <button type="submit">Registrar</button>
-                    <p class="message">Já registrado? Faça <a href="login.html">login</a></p>
                 </form>
             </div>
-        </div>
     </div>
 
 </body>
 
 <script>
-    const form = document.getElementById('registro-form');
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const senha = document.getElementById('senha').value;
-        registerUser(email, senha);
-    });
+    async function registerUser(email, senha) {
+    try {
+      const res = await fetch('https://site-backend-dqhu.onrender.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert('Cadastro feito com sucesso!');
+      } else {
+        alert('Erro: ' + (data.error || 'Falha desconhecida'));
+      }
+    } catch (err) {
+      alert('Erro de rede: ' + err.message);
+    }
+  }
+
+  const form = document.getElementById('register-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Agora as variáveis estão definidas corretamente
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    registerUser(email, senha);
+  });
 </script>
 
 </html>

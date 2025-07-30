@@ -12,17 +12,43 @@
 
 <body>
     <div class="login-page">
-        <div class="form">
-            <form id="formLogin">
-                <input type="text" placeholder="Email" id="email" required />
-                <input type="password" placeholder="Senha" id="senha" required />
-                <button type="submit">Faça Login</button>
-                <p class="message">Não registrado? <a href="registro.html">Crie uma conta</a></p>
-            </form>
-            <button type="button">Acesse sem fazer login</button>
-        </div>
-    </div>
+  <div class="form">
+    <form id="login-form">
+      <input type="text" placeholder="Email" id="email"/>
+      <input type="password" placeholder="Senha" id="senha"/>
+      <button type="button" onclick="login()">Faça Login</button>
+      <p class="message">Não registrado? <a href="registro.html">Crie uma conta</a></p>
+    </form>
+  </div>
+</div>
 
+<script>
+    function login() {
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        // Verificar se os campos de email e senha estão preenchidos
+            
+        if (email.trim() === "" || senha.trim() === "") {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+        var authenticatedUser = users.find(function(user) {
+            return user.email === email && user.senha === senha;
+        });
+
+        if (authenticatedUser) {
+            alert("Login bem-sucedido!");
+            window.location.href = "/cursos.html";
+        } else {
+            alert("Credenciais inválidas. Por favor, tente novamente.");
+        }
+    }
+
+    
+</script>
 </body>
 
 </html>

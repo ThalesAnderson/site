@@ -28,7 +28,6 @@
         <div id="quadrado_preto">
             <div class="form">
                 <form id="registro-form">
-                    <input type="text" placeholder="Nome" id="nome" />
                     <input type="text" placeholder="Email" id="email" />
                     <input type="password" placeholder="Senha" id="senha" />
                     <button type="submit">Registrar</button>
@@ -39,5 +38,15 @@
     </div>
 
 </body>
+
+<script>
+    const form = document.getElementById('registro-form');
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+        registerUser(email, senha);
+    });
+</script>
 
 </html>

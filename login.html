@@ -12,43 +12,51 @@
 
 <body>
     <div class="login-page">
-  <div class="form">
-    <form id="login-form">
-      <input type="text" placeholder="Email" id="email"/>
-      <input type="password" placeholder="Senha" id="senha"/>
-      <button type="button" onclick="login()">Faça Login</button>
-      <p class="message">Não registrado? <a href="registro.html">Crie uma conta</a></p>
-    </form>
-  </div>
-</div>
+        <div class="form">
 
-<script>
-    function login() {
-        var email = document.getElementById("email").value;
-        var senha = document.getElementById("senha").value;
+            <form id="login-form">
+                <input type="text" id="login" placeholder="Login..." required />
+                <input type="password" id="senha" placeholder="Senha..." />
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
-        // Verificar se os campos de email e senha estão preenchidos
-            
-        if (email.trim() === "" || senha.trim() === "") {
-            alert("Por favor, preencha todos os campos.");
-            return;
+    <script>
+        const loginCorreto = "Alunovision";
+        const senhaCorreta = "vision2025#";
+
+        function mostrarMensagem(texto, tipo = "sucesso") {
+            const msgDiv = document.getElementById("mensagem");
+            msgDiv.textContent = texto;
+            msgDiv.className = "mensagem";
+            if (tipo === "erro") msgDiv.classList.add("erro");
+            msgDiv.style.display = "block";
+
+            setTimeout(() => {
+                msgDiv.style.display = "none";
+            }, 4000);
         }
 
-        var users = JSON.parse(localStorage.getItem("users")) || [];
-        var authenticatedUser = users.find(function(user) {
-            return user.email === email && user.senha === senha;
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const login = document.getElementById('login').value;
+            const senha = document.getElementById('senha').value;
+
+            if (login === loginCorreto && senha === senhaCorreta) {
+                mostrarMensagem('Login bem-sucedido!');
+                setTimeout(() => {
+                    window.location.href = "cursos.html";
+                }, 2000);
+            } else {
+                mostrarMensagem('Login ou senha incorretos', 'erro');
+            }
         });
+    </script>
 
-        if (authenticatedUser) {
-            alert("Login bem-sucedido!");
-            window.location.href = "/cursos.html";
-        } else {
-            alert("Credenciais inválidas. Por favor, tente novamente.");
-        }
-    }
+     <div id="mensagem" style="display:none;" class="mensagem"></div>
 
-    
-</script>
 </body>
 
 </html>

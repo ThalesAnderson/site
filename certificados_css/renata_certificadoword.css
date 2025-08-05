@@ -6,8 +6,7 @@ body {
 
 header#cabecalho{
     height: 900px;
-    /* Certificado de Rosemeire */
-    background: url(/certificados/Rosemaire\ -\ Informática\ básica.jpg) no-repeat 50% 0%;
+    background: url(/certificados_img/Renata\ Souza\ de\ Jesus\ -\ Word.jpg) no-repeat 50% 0%;
     background-size: 1300px;
 }
 
@@ -24,4 +23,4 @@ button#voltar {
 
 button#voltar:hover {
     background-color: rgb(206, 206, 206);
-}   
+}

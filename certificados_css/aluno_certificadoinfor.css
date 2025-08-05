@@ -6,7 +6,7 @@ body {
 
 header#cabecalho{
     height: 900px;
-    background: url(/certificados/Renata\ Souza\ de\ Jesus\ -\ Word.jpg) no-repeat 50% 0%;
+    background: url() no-repeat 50% 0%;
     background-size: 1300px;
 }
 
@@ -23,4 +23,4 @@ button#voltar {
 
 button#voltar:hover {
     background-color: rgb(206, 206, 206);
-}
+}   

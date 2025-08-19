@@ -4,20 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/certificados.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/login.css">
   <link rel="shortcut icon" href="/img/fotinha.ico">
 
   <title>Certificados - Vision Tech</title>
 </head>
 
 <body>
+  <div class="menu"></div>
 
-  <ul class="menu">
-    <li class="menu_li"><a href="/index.html" class="menu_link">Início</a></li>
-    <li class="menu_li"><a href="/routes_principais/cursos.html" class="menu_link">Cursos</a></li>
-    <li class="menu_li"><a href="/routes_principais/sobre_nos.html" class="menu_link">Sobre nós</a></li>
-  </ul>
+  <script>
+    fetch("/components/header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector(".menu").innerHTML = data;
+      });
+  </script>
 
   <div class="login-page">
     <div class="form">
@@ -48,4 +51,5 @@
   </script>
 
 </body>
+
 </html>

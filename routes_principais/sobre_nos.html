@@ -8,18 +8,18 @@
   <link rel="shortcut icon" href="/img/fotinha.ico">
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/sobre_nos.css">
-
+  <link rel="stylesheet" href="/css/media-queries.css">
 </head>
 
-<header id="cabecalho">
-  <ul class="menu">
-    <li class="menu_li"><a href="index.html" class="menu_link">Início</a></li>
-    <li class="menu_li"><a href="/routes_principais/cursos.html" class="menu_link">Cursos</a></li>
-    <li class="menu_li"><a href="login.html" class="menu_link">Validação de Certificados</a></li>
-    <!-- <li class="menu_li"><a href="/registro.html" class="btn_signIn">Sign In</a></li>
-    <li class="menu_li"><a href="index.html" class="btn_signUp">Sign Up</a></li> -->
-  </ul>
-</header>
+<div class="menu"></div>
+
+<script>
+  fetch("/components/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector(".menu").innerHTML = data;
+    });
+</script>
 
 <body>
   <section id="sobre_nos">
@@ -83,40 +83,14 @@
     <h1>O que nossos alunos dizem</h1>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section-about">
-          <h3>Sobre</h3>
-          <p>A Vision Tech é uma pequena empresa digital, criada em fevereiro de 2024. Nosso intuito é a prestação de
-            serviço à empresas e pessoas, ajudando em: suas rotinas administrativas,
-            criação de sites, automações de processos e cursos voltados a área de informática.</p>
-        </div>
+  <div class="site-footer"></div>
 
-        <div class="footer-section links">
-          <h3>Links úteis</h3>
-          <ul>
-            <li><a href="index.html">início</a></li>
-            <li><a href="/routes_principais/cursos.html">Cursos</a></li>
-            <li><a href="/routes_principais/certificados.html">Validação de Certificados</a></li>
-            <li><a href="/routes_principais/sobre_nos.html">Sobre nós</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section social">
-
-          <h3>Redes Sociais</h3>
-
-          <ul>
-            <li><a href="https://www.instagram.com/avision_tech/" target="_blank">Instragram</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">&copy; 2024 Vision Tech. Todos os direitos reservados.
-    </div>
-  </footer>
-
+  <script>
+    fetch("/components/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector(".site-footer").innerHTML = data;
+      });
+  </script>
 </body>
 </html>

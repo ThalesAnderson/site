@@ -16,41 +16,32 @@
     <main>
         <div class="apresentacao"> <!--Imagem do cabecalho que será adicionada no CSS como background-->
 
-            <!-------HEADER---------->
             <div class="topo">
                 <!--Ahef com a logo (img)-->
                 <div class="logo">
                     <img src="/img/logo_falcao_png.png" alt="Logo da Vision Tech" class="logo-marca">
                 </div>
 
-                <!-- Menu tablet/mobile -->
+                <div class="menu"></div>
 
+                <script>
+                    fetch("components/header.html")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.querySelector(".menu").innerHTML = data;
+                        });
+                </script>
 
-                <!--Menu-->
-                <ul class="menu">
-                    <li class="menu_li"><a href="index.html" class="menu_link">Início</a></li>
-                    <!-- <li class="menu_li"><a href="servicos.html" class="menu_link">Serviços</a></li> -->
-                    <li class="menu_li"><a href="/routes_principais/cursos.html" class="menu_link">Cursos</a></li>
-                    <li class="menu_li"><a href="/routes_principais/sobre_nos.html" class="menu_link">Sobre nós</a></li>
-                    <li class="menu_li"><a href="/routes_principais/certificados.html" class="menu_link">Validação de Certificados</a></li>
-
-                    <!--Login e Entrar-->
-
-                    <!-- <li class="menu_li"><a href="index.html" class="btn_signIn">Login (em breve)</a></li>
-                    <li class="menu_li"><a href="index.html" class="btn_signUp">Sair</a></li> -->
-                </ul>
             </div>
 
             <div class="apresentacao_conteudo">
-                <h2 class="tit-apresentacao">Aqui na Vision você terá:<br>Criação de documentos para<br>
-                    ajuda administrativa,<br>construção de sites,<br>
-                    automação de processos<br>
-                    e cursos na área de informática.</h2>
+                <h2 class="tit-apresentacao">Aqui na Vision você vai aprender:<br><br>Informática básica;<br>
+                    Word básico;<br>Excel básico;<br>Inglês básico;<br><br>Tudo isso para você<br>se encaixar no mercado
+                    de trabalho!</h2>
 
-                <p class="descricao-apresentacao">Comece sua jornada com nossos<br>
-                    serviços!<br>
-                    Orientação de profissionais capacitados<br>
-                    para lhe auxiliar e ensinar da melhor maneira possível.</p>
+                <p class="descricao-apresentacao">Comece o seu aprendizado com nossos cursos!<br>
+                    Ajuda de profissionais capacitados<br>
+                    para lhe transmitir o conhecimento que você<br>precisa da melhor maneira possível.</p>
                 <div class="container_comecar">
                     <a href="/routes_principais/cursos.html" class="btn_comecar">Começar</a> <!-- Tirei o registro -->
                 </div>
@@ -85,8 +76,7 @@
                     </div>
 
                     <h6>Apoio<br>Individual<br></h6>
-                    <p>Instrutores e auxiliadores prontos<br>para te fornecer orientação<br>
-                        completa sobre nossos serviços.</p>
+                    <p>Instrutores prontos<br>para te fornecer orientação<br>completa sobre nossos cursos.</p>
                 </div>
 
                 <!--Item (3)-->
@@ -106,8 +96,8 @@
                         <img src="/img/estagio_icon.png" alt="Ícone de estágio" width="25%">
                     </div>
                     <h6>Foco no<br>Mercado<br></h6>
-                    <p>Indo direto ao assunto!<br>Nosso foco é prestar serviços que<br>realmente sejam usados<br>no
-                    mercado de trabalho</p>
+                    <p>Indo direto ao ponto!<br>Nosso foco é ensinar assuntos<br> que realmente sejam usados<br>no
+                        mercado de trabalho.</p>
                 </div>
             </div>
         </div>
@@ -120,19 +110,19 @@
                     <ul class="about_box_ul">
                         <li>
                             <img src="/img/verificado_icone.png" alt="Ícone de verificado" class="verificado">
-                            <span>Ajuda com formulação de documentos para suas rotinas administrativas;</span>
+                            <span>Aprender a informática básica de uma maneira didática;</span>
                         </li>
                         <li>
                             <img src="/img/verificado_icone.png" alt="Ícone de verificado" class="verificado">
-                            <span>Criação de sites para o seu negócio;</span>
+                            <span>Utilizar computadores naturalmente;</span>
                         </li>
                         <li>
                             <img src="/img/verificado_icone.png" alt="Ícone de verificado" class="verificado">
-                            <span>Automação de serviços para sua rotina/empresa;</span>
+                            <span>Fazer planilhas e gráficos elegantes;</span>
                         </li>
                         <li>
                             <img src="/img/verificado_icone.png" alt="Ícone de verificado" class="verificado">
-                            <span>Acesso aos nossos cursos na área de informática;</span>
+                            <span>Criar e editar documentos facilmente;</span>
                         </li>
                     </ul>
                     <a href="/routes_principais/cursos.html" class="btn_saiba_mais">Saiba mais</a>
@@ -143,42 +133,15 @@
         <!--SOBRE o site -->
         <div class="clear"></div>
 
-        <!---------------Inicio RODAPE DO SITE------------------>
-        <footer class="site-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section-about">
-                        <h3>Sobre</h3>
-                        <p>A Vision Tech é uma pequena empresa digital, criada em fevereiro de 2024. Nosso intuito é a
-                            prestação de serviço à empresas e pessoas, ajudando em: suas rotinas administrativas,
-                            criação de sites, automações de processos e cursos voltados a área de informática.</p>
-                    </div>
+        <div class="site-footer"></div>
 
-                    <div class="footer-section links">
-                        <h3>Links úteis</h3>
-                        <ul>
-                            <li><a href="#">Início</a></li>
-                            <li><a href="/routes_principais/cursos.html">Cursos</a></li>
-                            <li><a href="/routes_principais/certificados.html">Validação de Certificados</a></li>
-                            <li><a href="/routes_principais/sobre_nos.html">Sobre nós</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section social">
-
-                        <h3>Redes Sociais</h3>
-
-                        <ul>
-                            <li><a href="https://www.instagram.com/avision_tech/" target="_blank">Instragram</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                &copy; 2024-2025 Vision Tech. Todos os direitos reservados.
-            </div>
-        </footer>
+        <script>
+            fetch("components/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".site-footer").innerHTML = data;
+                });
+        </script>
     </main>
 </body>
 

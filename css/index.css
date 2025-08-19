@@ -33,15 +33,11 @@ main {
     transform: scale(1.1);
 }
 
-/* Posiciona UL na direita do site */
-.container_menu_mobile {
-    display: none;
-}
-
 .menu {
     display: flex;
     margin-right: 80px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: wrap;

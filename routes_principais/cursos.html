@@ -93,8 +93,7 @@
             <h2>Curso Básico de Inglês</h2>
             <p>10 horas</p>
             <div class="descricao-curso">
-                <p>Que tal aprender a falar o idioma mais famoso e mais importante do mundo? Comece seus primeiros
-                    passos aqui!</p>
+                <p>Que tal aprender a falar o idioma mais famoso e mais importante do mundo? Comece seus primeiros passos aqui!</p>
             </div>
         </div>
 
@@ -111,44 +110,19 @@
     </div>
     </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section-about">
-                    <h3>Sobre</h3>
-                    <p>A Vision Tech é uma pequena empresa digital, criada em fevereiro de 2024. Nosso intuito é a
-                        prestação de serviço à empresas e pessoas, ajudando em: suas rotinas administrativas,
-                        criação de sites, automações de processos e cursos voltados a área de informática.</p>
-                </div>
+    <div class="site-footer"></div>
 
-                <div class="footer-section links">
-                    <h3>Links úteis</h3>
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/routes_principais/cursos.html">Cursos</a></li>
-                        <li><a href="/routes_principais/certificados.html">Validação de Certificados</a></li>
-                        <li><a href="/routes_principais/sobre_nos.html">Sobre nós</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section social">
-
-                    <h3>Redes Sociais</h3>
-
-                    <ul>
-                        <li><a href="https://www.instagram.com/avision_tech/" target="_blank">Instragram</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            &copy; 2024 Vision Tech. Todos os direitos reservados.
-        </div>
-    </footer>
+        <script>
+            fetch("/components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector(".site-footer").innerHTML = data;
+            });
+        </script>
 
     <!-- Script para lidar com a pesquisa -->
     <script src="/js/barra_pesquisa.js"></script>
 
 </body>
+
 </html>

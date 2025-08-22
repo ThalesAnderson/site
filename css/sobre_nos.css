@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-/* Cabeçalho */
-header {
-  height: 180px;
+html, body {
+  overflow-x: hidden;
 }
 
+header {
+  height: 200px;
+}
 
 /* Sobre nós */
 section#sobre_nos {
@@ -12,7 +14,7 @@ section#sobre_nos {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   background-color: black;
 }
 
@@ -20,14 +22,14 @@ section#sobre_nos h1 {
   font-size: 40px;
   text-align: center;
   color: white;
-  padding-top: 100px;
+  margin-top: 70px;
 }
 
 section#sobre_nos p {
-  height: 300px;
   font-size: 24px;
   text-align: center;
   color: white;
+  margin: 50px 350px 150px 350px;
 }
 
 
@@ -44,6 +46,7 @@ section#cultura_organizacional {
   flex-wrap: wrap;
   align-content: center;
   align-items: flex-start;
+  margin: 0px 200px 0px 200px;
 }
 
 section#missao,
@@ -68,13 +71,12 @@ section#valores {
 .alinhar {
   display: flex;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .icon {
-  width: auto;
-  margin-right: 10px;
+  width: 190px;
+  margin-right: 20px;
   transition: 0.5s ease-in-out;
 }
 
@@ -82,6 +84,11 @@ section#valores {
   transform: scale(1.1);
 }
 
+img#visao {
+  height: 190px;
+  width: 160px;
+  margin-right: 20px;
+}
 
 /* Sessão dos clientes */
 section#clientes {
@@ -96,15 +103,64 @@ section#clientes h1 {
   padding-top: 55px;
   padding-bottom: 10px;
   color: white;
-  border-bottom: 2px dashed white;
 }
 
 section#feedback {
-  height: 500px;
-  margin-top: 100px;
+  margin: 0px 50px 0px 50px;
 }
 
 section#feedback h1 {
   text-align: center;
-  font-size: 40px; 
+  font-size: 40px;
+  margin: 80px 0px 0px 0px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+div#word, div#excel, div#word_excel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  width: 300px;
+  padding: 50px 30px 40px 30px;
+  margin: 100px 0px 100px 200px;
+  border: 2px solid black;
+  border-radius: 5% 5% 5% 5%;
+  animation-name: slide;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+div#word {
+  background-image: linear-gradient(45deg, #3A75B9, #ade8ff);
+}
+
+div#excel {
+  background-image: linear-gradient(45deg, #26AB6C, #ade8ff);
+}
+
+div#word_excel {
+  background-image: linear-gradient(-45deg, #3177c7, #24c479);
+}
+
+@keyframes slide {
+  0% {transform: translateX(-500%);}
+  100% {transform: translateX(100vw);}
+}
+
+.comentario > p {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 30px 20px 0px 20px;
+}
+
+.nome_aluno {
+  font-size: 20px;
+  margin: 0px 20px 0px 20px;
 }

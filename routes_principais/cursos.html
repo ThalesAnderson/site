@@ -18,12 +18,15 @@
             <img class="falcao" src="/img/logo_falcao_png.png">
         </div>
 
-        <div class="navbar">
-            <ul class="navbar_ul">
-                <li class="navbar_li"><a href="/index.html">Início</a></li>
-                <li class="navbar_li"><a href="#">Perfil (Em breve)</a></li>
-            </ul>
-        </div>
+        <div class="menu"></div>
+
+        <script>
+            fetch("/components/header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".menu").innerHTML = data;
+                });
+        </script>
     </div>
 
     <!-- Barra de pesquisa -->
@@ -93,7 +96,8 @@
             <h2>Curso Básico de Inglês</h2>
             <p>10 horas</p>
             <div class="descricao-curso">
-                <p>Que tal aprender a falar o idioma mais famoso e mais importante do mundo? Comece seus primeiros passos aqui!</p>
+                <p>Que tal aprender a falar o idioma mais famoso e mais importante do mundo? Comece seus primeiros
+                    passos aqui!</p>
             </div>
         </div>
 
@@ -112,13 +116,13 @@
 
     <div class="site-footer"></div>
 
-        <script>
-            fetch("/components/footer.html")
+    <script>
+        fetch("/components/footer.html")
             .then(response => response.text())
             .then(data => {
                 document.querySelector(".site-footer").innerHTML = data;
             });
-        </script>
+    </script>
 
     <!-- Script para lidar com a pesquisa -->
     <script src="/js/barra_pesquisa.js"></script>

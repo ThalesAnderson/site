@@ -265,7 +265,7 @@ div#cor-beneficio {
 
 .site-footer {
     background-color: #f5f5f5;
-    padding: 60px 0;
+    padding: 50px 0px 40px 0px;
 }
 
 .container {
@@ -341,7 +341,7 @@ div#cor-beneficio {
 
 .footer-bottom {
     font-size: 18px;
-    margin-top: 8%;
+    margin-top: 7%;
     text-align: center;
     color: #666;
 }

@@ -1,11 +1,21 @@
 @charset "UTF-8";
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 header {
   height: 200px;
+}
+
+section#sobre_nos>h1,
+section#cultura_organizacional>h4,
+section#clientes>h1,
+.testimonials>h1 {
+  text-align: center;
+  font-size: 56px;
+  margin: 70px 0px 50px 0px;
 }
 
 /* Sobre nós */
@@ -19,10 +29,7 @@ section#sobre_nos {
 }
 
 section#sobre_nos h1 {
-  font-size: 40px;
-  text-align: center;
   color: white;
-  margin-top: 70px;
 }
 
 section#sobre_nos p {
@@ -32,12 +39,8 @@ section#sobre_nos p {
   margin: 50px 350px 150px 350px;
 }
 
-
-/* Seção dos itens */
 section#cultura_organizacional {
-  text-align: center;
-  font-size: 56px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .items {
@@ -92,75 +95,107 @@ img#visao {
 
 /* Sessão dos clientes */
 section#clientes {
-  height: 500px;
-  margin-top: 100px;
+  height: 600px;
   background-color: black;
+  padding-top: 15px;
 }
 
 section#clientes h1 {
-  text-align: center;
-  font-size: 40px;
-  padding-top: 55px;
-  padding-bottom: 10px;
   color: white;
+  margin-bottom: 130px;
 }
 
-section#feedback {
-  margin: 0px 50px 0px 50px;
-}
-
-section#feedback h1 {
+.testimonials {
+  height: 600px;
   text-align: center;
-  font-size: 40px;
-  margin: 80px 0px 0px 0px;
+  background: #ffffff;
+  margin-bottom: 100px;
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
+.testimonials>h1 {
+  margin-bottom: 100px;
 }
 
-div#word, div#excel, div#word_excel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 500px;
-  width: 300px;
-  padding: 50px 30px 40px 30px;
-  margin: 100px 0px 100px 200px;
-  border: 2px solid black;
-  border-radius: 5% 5% 5% 5%;
-  animation-name: slide;
-  animation-timing-function: linear;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
+.slider {
+  position: relative;
+  max-width: 700px;
+  margin: 30px auto;
+  overflow: hidden;
 }
 
-div#word {
+.slide {
+  display: none;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fade 20s infinite;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide p {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.slide h4 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.controls {
+  display: none;
+  margin-top: 15px;
+}
+
+.controls span {
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0 15px;
+  user-select: none;
+  color: #333;
+}
+
+.indicators {
+  margin-top: 10px;
+}
+
+.indicators span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicators .active {
+  background: #333;
+}
+
+.slide.word {
   background-image: linear-gradient(45deg, #3A75B9, #ade8ff);
 }
 
-div#excel {
+.slide.excel {
   background-image: linear-gradient(45deg, #26AB6C, #ade8ff);
 }
 
-div#word_excel {
+.slide.word_excel {
   background-image: linear-gradient(-45deg, #3177c7, #24c479);
-}
-
-@keyframes slide {
-  0% {transform: translateX(-500%);}
-  100% {transform: translateX(100vw);}
-}
-
-.comentario > p {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 40px;
-  margin: 30px 20px 0px 20px;
-}
-
-.nome_aluno {
-  font-size: 20px;
-  margin: 0px 20px 0px 20px;
 }

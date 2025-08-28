@@ -525,7 +525,7 @@
     }
 
     .logo-marca {
-        width: 70px;
+        width: 60px;
     }
 
     .menu_li {
@@ -544,7 +544,7 @@
         display: flex;
         flex-wrap: wrap;
         align-content: flex-end;
-        margin: 10% 8% 5% 0%;
+        margin: 6% 8% 5% 0%;
     }
 
     .tit-apresentacao {
@@ -600,7 +600,7 @@
     }
 
     .about_box {
-        width: 35%;
+        width: 38%;
         margin: 6% 10% 6% 0%;
     }
 

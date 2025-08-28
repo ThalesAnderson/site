@@ -31,69 +31,109 @@
 
   <section id="cultura_organizacional">
     <h4>Nossa cultura</h4>
+
+    <div class="items">
+
+      <section id="missao">
+        <h1 class="titulo">Missão</h1>
+        <div class="container_sobre">
+          <div class="alinhar">
+            <span class="texto">Mostrar que qualquer pessoa, seja adulta ou jovem, pode se encaixar no mercado de
+              trabalho
+              por meio da informática. Tudo isso de maneira simples, rápida e acessível.</span>
+            <img class="icon" src="/img/missao.png" width="200" height="200">
+          </div>
+        </div>
+      </section>
+
+      <section id="visao">
+        <h1 class="titulo">Visão</h1>
+        <div class="container_sobre">
+          <div class="alinhar">
+            <span class="texto">Nos tornar uma excelente referência no seu processo de aprendizado em informática e em
+              suas infinitas ferramentas. </span>
+            <img id="visao" class="icon" src="/img/visao.png" width="200" height="200">
+          </div>
+        </div>
+      </section>
+
+      <section id="valores">
+        <h1 class="titulo">Valores</h1>
+        <div class="container_sobre">
+          <div class="alinhar">
+            <span class="texto">Aulas com ótima didática;<br>
+              Aulas sem enrolação para você aprender com rapidez;<br>
+              Aulas de qualidade para que todos possam aprender;<br>
+              Foco no mercado de trabalho, você vai aprender somente o essencial!</span>
+            <img class="icon" src="/img/valor.png" width="200" height="200">
+          </div>
+      </section>
+    </div>
   </section>
-
-  <div class="items">
-
-    <section id="missao">
-      <h1 class="titulo">Missão</h1>
-      <div class="container_sobre">
-        <div class="alinhar">
-          <span class="texto">Mostrar que qualquer pessoa, seja adulta ou jovem, pode se encaixar no mercado de trabalho
-            por meio da informática. Tudo isso de maneira simples, rápida e acessível.</span>
-          <img class="icon" src="/img/missao.png" width="200" height="200">
-        </div>
-      </div>
-    </section>
-
-    <section id="visao">
-      <h1 class="titulo">Visão</h1>
-      <div class="container_sobre">
-        <div class="alinhar">
-          <span class="texto">Nos tornar uma excelente referência no seu processo de aprendizado em informática e em
-            suas infinitas ferramentas. </span>
-          <img id="visao" class="icon" src="/img/visao.png" width="200" height="200">
-        </div>
-      </div>
-    </section>
-
-    <section id="valores">
-      <h1 class="titulo">Valores</h1>
-      <div class="container_sobre">
-        <div class="alinhar">
-          <span class="texto">Aulas com ótima didática;<br>
-            Aulas sem enrolação para você aprender com rapidez;<br>
-            Aulas de qualidade para que todos possam aprender;<br>
-            Foco no mercado de trabalho, você vai aprender somente o essencial!</span>
-          <img class="icon" src="/img/valor.png" width="200" height="200">
-        </div>
-    </section>
-  </div>
 
   <section id="clientes">
     <h1>Nossos parceiros</h1>
   </section>
 
-  <section id="feedback">
+  <section class="testimonials">
     <h1>O que nossos alunos dizem</h1>
-
-    <div class="flex">
-      <div id="word_excel" class="comentario">
-        <p>"Eu gostei bastante das aulas! Consegui entender porque você explica bem o conteúdo."</p>
-        <h3 class="nome_aluno">Renata Souza, sobre os cursos de Word e Excel.</h3>
-      </div>
-
-      <div id="word" class="comentario">
+    <div class="slider">
+      <div class="slide active word">
         <p>"Você ensina de um jeito bem fácil, aprendi rápido."</p>
-        <h3 class="nome_aluno">Gustavo Pereira, sobre o curso de Word.</h3>
+        <h4>Gustavo Pereira, sobre o curso de Word.</h4>
       </div>
-
-      <div id="excel" class="comentario">
-        <p>"Não tinha muita prática com computador, então pensei que demoraria mais para aprender rs. Foi bem rápido, obrigada."</p>
-        <h3 class="nome_aluno">Rosemaire, sobre o curso de Excel.</h3>
+      <div class="slide excel">
+        <p>"Não tinha muita prática com computador, então pensei que demoraria mais para aprender rsrs. Foi bem rápido,
+          obrigada!"</p>
+        <h4>Rosemaire, sobre o curso de Excel.</h4>
+      </div>
+      <div class="slide word_excel">
+        <p>“Eu gostei bastante das aulas! Consegui entender porque você explica bem o conteúdo.”</p>
+        <h4>Renata Souza, sobre os cursos de Word e Excel.</h4>
       </div>
     </div>
+    <div class="controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+    <div class="indicators"></div>
   </section>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const indicators = document.querySelector(".indicators");
+
+    let index = 0;
+
+    // Criar bolinhas
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      indicators.appendChild(dot);
+
+      dot.addEventListener("click", () => {
+        showSlide(i);
+      });
+    });
+
+    const dots = document.querySelectorAll(".indicators span");
+
+    function showSlide(i) {
+      slides[index].classList.remove("active");
+      dots[index].classList.remove("active");
+      index = (i + slides.length) % slides.length;
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
+    }
+
+    prev.addEventListener("click", () => showSlide(index - 1));
+    next.addEventListener("click", () => showSlide(index + 1));
+
+    // Auto play
+    setInterval(() => showSlide(index + 1), 8000);
+  </script>
 
   <div class="site-footer"></div>
 
@@ -105,5 +145,4 @@
       });
   </script>
 </body>
-
 </html>

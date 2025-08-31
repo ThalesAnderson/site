@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* Definindo a fonte do site */
-
 html,
 body {
     width: 100%;
@@ -54,7 +53,7 @@ main {
 .menu_li:hover {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Tira a decoração do link */

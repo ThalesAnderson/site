@@ -352,7 +352,7 @@
         background: url(/img/logo-vision.jpg) no-repeat 6% 50%;
         background-size: 40%;
     }
-    
+
     .apresentacao_conteudo {
         display: flex;
         flex-wrap: wrap;
@@ -518,7 +518,7 @@
 
 @media screen and (min-width: 1401px) and (max-width: 2000px) {
 
-.topo {
+    .topo {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -620,7 +620,7 @@
         font-size: 24px;
     }
 
-    .footer-section  li {
+    .footer-section li {
         font-size: 18px;
     }
 }
@@ -729,14 +729,14 @@
         font-size: 28px;
     }
 
-    .footer-section  li {
+    .footer-section li {
         font-size: 20px;
     }
 }
 
 @media screen and (min-width: 2401px) {
 
- .topo {
+    .topo {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -842,7 +842,7 @@
         font-size: 28px;
     }
 
-    .footer-section  li {
+    .footer-section li {
         font-size: 20px;
     }
 }

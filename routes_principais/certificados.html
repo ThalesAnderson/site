@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/certificados.css">
   <link rel="shortcut icon" href="/img/fotinha.ico">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
   <title>Certificados - Vision Tech</title>
 </head>
@@ -22,9 +23,10 @@
       });
   </script>
 
-  <div class="login-page">
+  <div class="form-page">
     <div class="form">
-      <form id="login-form">
+      <h1 class="titulo">Insira o código abaixo:</h1>
+      <form class="login-form">
         <input type="text" placeholder="Insira o código de autenticação..." id="codigo">
         <button type="button" onclick="validar()">Procurar</button>
       </form>
@@ -37,11 +39,11 @@
 
       if (codigo.trim() === "VT-JD8X") {
         alert("Este certificado é válido! Pressione ok para acessar o documento.");
-        window.location.href = "/renata_word.html";
+        window.location.href = "../certificados_html/renata_word.html";
       }
       if (codigo.trim() === "VT-TR6N") {
         alert("Este certificado é válido! Pressione ok para acessar o documento.");
-        window.location.href = "/renata_excel.html";
+        window.location.href = "../certificados_html/renata_excel.html";
       }
       if (codigo.trim() === "VT-L1JD") {
         alert("Este certificado é válido! Pressione ok para acessar o documento.");
@@ -51,5 +53,4 @@
   </script>
 
 </body>
-
 </html>

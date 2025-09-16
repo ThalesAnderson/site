@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview - Informática</title>
+    <link rel="stylesheet" href="/cursos/todos_os_cursos.css">
+    <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="topo">
+        <div class="logo">
+            <img class="logo-marca" src="/img/logo_falcao_png.png">
+        </div>
+
+        <div class="menu"></div>
+
+        <script>
+            fetch("/components/header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(".menu").innerHTML = data;
+                });
+        </script>
+    </div>
+
+    <div id="main">
+        <div class="content">
+            <main class="main-content">
+                <h1>O que você vai aprender no Curso de Introdução à Informática Básica?</h1>
+
+                <iframe width="1280" height="570" src="https://www.youtube.com/embed/jr0vAkMJrvQ"
+                    title="tentando jogar jogos de flash extremamente duvidosos" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </main>
+        </div>
+    </div>
+
+    <div class="site-footer"></div>
+
+    <script>
+        fetch("/components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector(".site-footer").innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

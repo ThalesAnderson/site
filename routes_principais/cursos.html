@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/css/cursos.css">
     <link rel="shortcut icon" href="/img/fotinha.ico">
 
-
     <title>Vision Tech - Cursos</title>
 </head>
 
@@ -29,25 +28,11 @@
         </script>
     </div>
 
-    <!-- Barra de pesquisa -->
-    <div class="pesquisa-barra">
-        <form id="searchForm" action="#" method="GET">
-            <input type="text" id="searchInput" name="q" placeholder="Pesquisar..." oninput="handleSearch()">
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
-
-    <!-- Parte com os cursos - side -->
     <div class="cursos">
         <h1 class="niveis">Cursos Introdutórios</h1>
 
-        <!--Resultado da pesquisa-->
-        <div class="pesquisa-resultado">
-            <p id="mensagemPesquisa"></p>
-        </div>
-
         <div class="content-cursos" id="curso">
-            <img class="thumbnail" src="/img/Thumbnail - Introdução a informática.jpg">
+            <a href="../cursos/informatica/informatica_preview.html"><img class="thumbnail" src="/img/Thumbnail - Introdução a informática.jpg"></a>
         </div>
 
         <div class="detalhes-cursos">
@@ -61,7 +46,7 @@
         <h1 class="niveis">Cursos Básicos</h1>
 
         <div class="content-cursos" id="curso">
-            <img class="thumbnail" src="/img/Thumbnail - Curso de Word.jpg">
+            <a href="../cursos/word/word_preview.html"><img class="thumbnail" src="/img/Thumbnail - Curso de Word.jpg"></a>
         </div>
 
         <div class="detalhes-cursos">
@@ -73,7 +58,7 @@
         </div>
 
         <div class="content-cursos" id="curso">
-            <img class="thumbnail" src="/img/Thumbnail - Curso de Excel.jpg">
+            <a href="../cursos/excel/excel_preview.html"><img class="thumbnail" src="/img/Thumbnail - Curso de Excel.jpg"></a>
         </div>
 
         <div class="detalhes-cursos">
@@ -99,7 +84,7 @@
     -->
 
         <div class="content-cursos" id="curso">
-            <img class="thumbnail" src="/img/Thumbnail - Curso de Inglês.jpg">
+            <a href="/cursos/ingles/ingles_preview.html"><img class="thumbnail" src="/img/Thumbnail - Curso de Inglês.jpg"></a>
         </div>
 
         <div class="detalhes-cursos">
@@ -134,9 +119,5 @@
             });
     </script>
 
-    <!-- Script para lidar com a pesquisa -->
-    <script src="/js/barra_pesquisa.js"></script>
-
 </body>
-
 </html>

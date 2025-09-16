@@ -22,7 +22,7 @@ main {
 
 /* Propoção da img da logo "Falcão da Vision" no canto esquerdo em cima */
 .logo img {
-    width: 30x;
+    width: 60px;
     margin-left: 15px;
     transition: transform 0.5s ease-in-out;
 }
@@ -183,7 +183,6 @@ div#cor-beneficio {
     transform: scale(1.1); 
 }
 
-/* Teste de cores zebras do site */
 .conteudo-box-icones h6{
     font-size: 22px;
     font-weight: bold;
@@ -191,7 +190,6 @@ div#cor-beneficio {
     margin: 10px 0;
 }
 
-/* Teste de cores zebras do site */
 .conteudo-box-icones p{
     font-size: 16px;
     line-height: 22px;
@@ -204,7 +202,6 @@ div#cor-beneficio {
     background-image: url(../img/background.webp);
 }
 
-/* Ajustando o estilo da caixa de texto */
 .about_box {
     display: flex;
     flex-direction: column;

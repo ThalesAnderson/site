@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/certificados.css">
   <link rel="shortcut icon" href="/img/fotinha.ico">
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
   <title>Certificados - Vision Tech</title>
 </head>
@@ -23,34 +23,48 @@
       });
   </script>
 
-  <div class="form-page">
-    <div class="form">
-      <h1 class="titulo">Insira o código abaixo:</h1>
-      <form class="login-form">
-        <input type="text" placeholder="Insira o código de autenticação..." id="codigo">
-        <button type="button" onclick="validar()">Procurar</button>
+  <div class="quase_body">
+
+    <div class="container_form">
+      <h1 class="tituto">Consultar Certificado</h1>
+
+      <form id="form-certificado">
+        <input type="text" id="codigo" placeholder="Digite o código do certificado" required>
+        <button type="submit">Procurar</button>
       </form>
     </div>
+
+    <div id="resultado"></div>
+
+    <script>
+      document.getElementById("form-certificado").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const codigo = document.getElementById("codigo").value.trim();
+        const resultado = document.getElementById("resultado");
+        resultado.innerHTML = "Carregando...";
+
+        try {
+          const res = await fetch(`http://127.0.0.1:5000/certificado?codigo=${codigo}`);
+          if (!res.ok) throw new Error("Certificado não encontrado");
+
+          const data = await res.json();
+
+          // Mostrar imagem com fade-in
+          const img = document.createElement("img");
+          img.src = `http://127.0.0.1:5000${data.url}`;
+          img.alt = "Certificado";
+          resultado.innerHTML = "";
+          resultado.appendChild(img);
+          setTimeout(() => { img.style.opacity = 1; }, 50);
+
+        } catch (err) {
+          resultado.innerHTML = `<span>${err.message}</span>`;
+        }
+      });
+    </script>
+
   </div>
-
-  <script>
-    function validar() {
-      var codigo = document.getElementById("codigo").value;
-
-      if (codigo.trim() === "VT-JD8X") {
-        alert("Este certificado é válido! Pressione ok para acessar o documento.");
-        window.location.href = "../certificados_html/renata_word.html";
-      }
-      if (codigo.trim() === "VT-TR6N") {
-        alert("Este certificado é válido! Pressione ok para acessar o documento.");
-        window.location.href = "../certificados_html/renata_excel.html";
-      }
-      if (codigo.trim() === "VT-L1JD") {
-        alert("Este certificado é válido! Pressione ok para acessar o documento.");
-        window.location.href = "/.html";
-      }
-    }
-  </script>
-
 </body>
+
 </html>

@@ -2,44 +2,37 @@
 
 html,
 body {
-    height: 97vh;
     font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
-    margin: 0px;
 }
 
-.form-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 20%;
-}
-
-.form {
+.quase_body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.container_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 200px;
     width: 400px;
     background-color: #fff;
     padding: 20px;
+    margin: 8% 0 8% 0;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.titulo {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin: 10px 0px 30px 0px;
-}
-
-.login-form {
+form#form_certificado {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.form input {
+.container_form input {
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
@@ -49,7 +42,7 @@ body {
     box-sizing: border-box;
 }
 
-.form button {
+.container_form button {
     height: 60%;
     width: 50%;
     padding: 10px;
@@ -60,6 +53,12 @@ body {
     cursor: pointer;
 }
 
-.form button:hover {
+.container_form button:hover {
     background-color: #0056b3;
+}
+
+#resultado > img {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
 }

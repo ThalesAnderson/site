@@ -7,6 +7,8 @@
     <title>Vision Tech</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
     <link rel="shortcut icon" href="/img/fotinha.ico">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
@@ -19,6 +21,7 @@
             <div class="topo">
                 <!--Ahef com a logo (img)-->
                 <div class="logo">
+                    <span id="hamburguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
                     <img src="/img/logo_falcao_png.png" alt="Logo da Vision Tech" class="logo-marca">
                 </div>
 
@@ -30,6 +33,14 @@
                             document.querySelector(".menu").innerHTML = data;
                         });
                 </script>
+
+                <!-- Menu mobile -->
+                <ul id="nav_menu" class="nav_menu">
+                    <li class="li_menu"><a href="../index.html">Inicio</a></li>
+                    <li class="li_menu"><a href="../routes_principais/cursos.html">Cursos</a></li>
+                    <li class="li_menu"><a href="../routes_principais/sobre_nos.html">Sobre nós</a></li>
+                    <li class="li_menu"><a href="../routes_principais/certificados.html">Validação de certificados</a></li>
+                </ul>
             </div>
 
             <div class="apresentacao_conteudo">
@@ -134,6 +145,17 @@
                 });
         </script>
     </main>
+
+    <script>
+        function clickMenu() {
+            if (nav_menu.style.display == 'block') {
+                nav_menu.style.display = 'none'
+            } else {
+                nav_menu.style.display = 'block'
+            }
+        }
+    </script>
+
 </body>
 
 </html>

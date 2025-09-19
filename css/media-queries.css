@@ -10,15 +10,47 @@
     }
 
     .logo {
-        width: 80px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .logo-marca {
-        width: 40px;
-    }
-
+    /* Tirando o menu de PC */
     .menu {
         display: none;
+    }
+
+    /* Configurações do menu mobile */
+    span#hamburguer {
+        font-size: 40px;
+        cursor: pointer;
+        margin: 8px 8px 0px 0px;
+    }
+
+    .nav_menu {
+        display: none;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .li_menu {
+        background-color: rgba(226, 226, 226, 0.959);
+    }
+
+    .li_menu:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .li_menu>a {
+        display: block;
+        font-weight: bolder;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: black;
+        border-top: 2px solid black;
+        padding: 8px;
     }
 
     .apresentacao {
@@ -147,11 +179,10 @@
     }
 
     .logo {
-        width: 80px;
-    }
-
-    .logo-marca {
-        width: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     /* Menu de PC desaparece */
@@ -159,12 +190,44 @@
         display: none;
     }
 
+    /* Configurações do menu mobile */
+    span#hamburguer {
+        font-size: 40px;
+        cursor: pointer;
+        margin: 8px 8px 0px 0px;
+    }
+
+    .nav_menu {
+        display: none;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    .li_menu {
+        background-color: rgba(226, 226, 226, 0.959);
+    }
+
+    .li_menu:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .li_menu>a {
+        display: block;
+        font-weight: bolder;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: black;
+        border-top: 2px solid black;
+        padding: 8px;
+    }
+
     /* Logo da Vision Tech */
     .apresentacao {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        background: url(/img/logo-vision.jpg) no-repeat 50% 18%;
+        background: url(/img/logo-vision.jpg) no-repeat 50% 20%;
         background-size: 80%;
     }
 
@@ -175,7 +238,7 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        margin: 50% 0px 5% 0px;
+        margin: 56% 0px 5% 0px;
     }
 
     /* Texto 01 da Vision */
@@ -316,13 +379,18 @@
         width: 55px;
     }
 
+    .nav_menu,
+    span#hamburguer {
+        display: none;
+    }
+
     .menu {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         flex-wrap: wrap;
         padding-left: 0px;
-        margin: 20px 80px 0px 0px;
+        margin: 20px 40px 0px 0px;
     }
 
     .menu_li {
@@ -436,6 +504,15 @@
         width: 60px;
     }
 
+    .nav_menu,
+    span#hamburguer {
+        display: none;
+    }
+
+    .menu {
+        margin-right: 40px;
+    }
+
     .menu_li {
         font-size: 20px;
     }
@@ -526,6 +603,15 @@
 
     .logo-marca {
         width: 60px;
+    }
+
+    .nav_menu,
+    span#hamburguer {
+        display: none;
+    }
+
+    .menu {
+        margin-right: 40px;
     }
 
     .menu_li {
@@ -637,6 +723,15 @@
         width: 70px;
     }
 
+    .nav_menu,
+    span#hamburguer {
+        display: none;
+    }
+
+    .menu {
+        margin-right: 40px;
+    }
+
     .menu_li {
         font-size: 21px;
         margin-left: 40px;
@@ -744,6 +839,11 @@
 
     .logo-marca {
         width: 80px;
+    }
+
+    .nav_menu,
+    span#hamburguer {
+        display: none;
     }
 
     .menu {

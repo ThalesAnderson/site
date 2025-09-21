@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
+    height: 250px;
     width: 400px;
     background-color: #fff;
     padding: 20px;
@@ -25,7 +25,19 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-form#form_certificado {
+.titulo {
+    font-size: 2.2em;
+    margin: 8px 0px 8px 0px;
+}
+
+.instrucao {
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    margin: 0px 0px 30px 0px;
+}
+
+form#form-certificado {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,18 +46,17 @@ form#form_certificado {
 
 .container_form input {
     text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
+    width: 250px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
-.container_form button {
-    height: 60%;
-    width: 50%;
-    padding: 10px;
+#form-certificado button {
+    height: 40px;
+    width: 120px;
     background-color: #007bff;
     color: #fff;
     border: none;

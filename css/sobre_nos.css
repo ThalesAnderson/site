@@ -9,6 +9,10 @@ header {
   height: 200px;
 }
 
+.nav_menu {
+  display: none;
+}
+
 section#sobre_nos>h1,
 section#cultura_organizacional>h4,
 section#clientes>h1,
@@ -59,12 +63,7 @@ section#valores {
 }
 
 .titulo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   font-size: 40px;
-  color: black;
 }
 
 .texto {
@@ -106,7 +105,7 @@ section#clientes h1 {
 }
 
 .testimonials {
-  height: 600px;
+  
   text-align: center;
   background: #ffffff;
   margin-bottom: 100px;

@@ -4,6 +4,7 @@
 
     /*CELULAR */
 
+    /* Ajustes index */
     html,
     body {
         width: 100%;
@@ -166,6 +167,33 @@
         width: 20%;
         padding: 0 5%;
         margin: 0px;
+    }
+
+    /* PÁGINA SOBRE NÓS */
+
+    section#sobre_nos h1 {
+        margin: 80px 20px 0px 20px;
+    }
+
+    section#sobre_nos p {
+        margin: 50px 80px 80px 80px;
+    }
+
+    .alinhar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+
+    .texto {
+        text-align: center;
+        margin-bottom: 40px;
     }
 }
 
@@ -362,6 +390,12 @@
     .footer-content {
         margin: 0% 4%;
     }
+
+    /* PÁGINA SOBRE NÓS */
+
+    section#sobre_nos p {
+        margin: 50px 100px 150px 100px;
+    }
 }
 
 
@@ -390,7 +424,7 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         padding-left: 0px;
-        margin: 20px 40px 0px 0px;
+        margin: 20px 40px 30px 0px;
     }
 
     .menu_li {
@@ -489,6 +523,12 @@
 
     .footer-content {
         margin: 0% 6%;
+    }
+
+    /* PÁGINA SOBRE NÓS */
+
+    section#sobre_nos p {
+        margin: 50px 150px 150px 150px;
     }
 }
 
@@ -590,6 +630,12 @@
 
     .footer-content {
         margin: 0% 6%;
+    }
+
+    /* PÁGINA SOBRE NÓS */
+
+    section#sobre_nos p {
+        margin: 50px 200px 150px 200px;
     }
 }
 
@@ -708,6 +754,12 @@
 
     .footer-section li {
         font-size: 18px;
+    }
+
+    /* PÁGINA SOBRE NÓS */
+
+    section#sobre_nos p {
+        margin: 50px 200px 150px 200px;
     }
 }
 

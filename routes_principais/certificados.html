@@ -45,14 +45,14 @@
         resultado.innerHTML = "Carregando...";
 
         try {
-          const res = await fetch(`http://127.0.0.1:5000/certificado?codigo=${codigo}`);
+          const res = await fetch(`https://certificados-inh0.onrender.com/certificado?codigo=${codigo}`);
           if (!res.ok) throw new Error("Certificado não encontrado");
 
           const data = await res.json();
 
           // Mostrar imagem com fade-in
           const img = document.createElement("img");
-          img.src = `http://127.0.0.1:5000${data.url}`;
+          img.src = `https://certificados-inh0.onrender.com/${data.url}`;
           img.alt = "Certificado";
           resultado.innerHTML = "";
           resultado.appendChild(img);

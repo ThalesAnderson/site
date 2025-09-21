@@ -78,6 +78,5 @@ def admin():
         mensagem = f"Certificado {codigo} adicionado com sucesso!"
     return render_template_string(html, mensagem=mensagem)
 
-
 if __name__ == "__main__":
     app.run(debug=True)

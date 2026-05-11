@@ -29,7 +29,11 @@ div#main {
 }
 
 .redirecionar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    width: 400px;
 }
 
 .botao_curso {
@@ -38,8 +42,8 @@ div#main {
     align-items: center;
     height: 80px;
     width: 300px;
-    text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*text-decoration: none;*/
+    font-family:'Courier New', Courier, monospace;
     font-size: 20px;
     color: white;
     background: black;

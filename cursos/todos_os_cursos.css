@@ -28,6 +28,10 @@ div#main {
     margin: 50px 0px 50px 0px;
 }
 
+.redirecionar {
+    height: 200px;
+}
+
 .botao_curso {
     display: flex;
     justify-content: center;
